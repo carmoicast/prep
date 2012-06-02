@@ -1,47 +1,58 @@
-<h1>Listing generals</h1>
-
-<table>
-  <tr>
-    <th>Nombre</th>
-    <th>Paterno</th>
-    <th>Materno</th>
-    <th>Telefono</th>
-    <th>Tipotel</th>
-    <th>Email</th>
-    <th>Domicilio</th>
-    <th>Colonia</th>
-    <th>Estudios</th>
-    <th>Rolfamiliar</th>
-    <th>Profesion</th>
-    <th>Id estructura</th>
-    <th>Id campaign</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @generals.each do |general| %>
-  <tr>
-    <td><%= general.nombre %></td>
-    <td><%= general.paterno %></td>
-    <td><%= general.materno %></td>
-    <td><%= general.telefono %></td>
-    <td><%= general.tipotel %></td>
-    <td><%= general.email %></td>
-    <td><%= general.domicilio %></td>
-    <td><%= general.colonia %></td>
-    <td><%= general.estudios %></td>
-    <td><%= general.rolfamiliar %></td>
-    <td><%= general.profesion %></td>
-    <td><%= general.id_estructura %></td>
-    <td><%= general.id_campaign %></td>
-    <td><%= link_to 'Show', general %></td>
-    <td><%= link_to 'Edit', edit_general_path(general) %></td>
-    <td><%= link_to 'Destroy', general, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+<%- model_class = General.new.class -%>
+<h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nombre) %></th>
+      <th><%= model_class.human_attribute_name(:paterno) %></th>
+      <th><%= model_class.human_attribute_name(:materno) %></th>
+      <th><%= model_class.human_attribute_name(:telefono) %></th>
+      <th><%= model_class.human_attribute_name(:tipotel) %></th>
+      <th><%= model_class.human_attribute_name(:email) %></th>
+      <th><%= model_class.human_attribute_name(:domicilio) %></th>
+      <th><%= model_class.human_attribute_name(:colonia) %></th>
+      <th><%= model_class.human_attribute_name(:estudios) %></th>
+      <th><%= model_class.human_attribute_name(:rolfamiliar) %></th>
+      <th><%= model_class.human_attribute_name(:profesion) %></th>
+      <th><%= model_class.human_attribute_name(:id_estructura) %></th>
+      <th><%= model_class.human_attribute_name(:id_campaign) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @generals.each do |general| %>
+      <tr>
+        <td><%= link_to general.id, general_path(general) %></td>
+        <td><%= general.nombre %></td>
+        <td><%= general.paterno %></td>
+        <td><%= general.materno %></td>
+        <td><%= general.telefono %></td>
+        <td><%= general.tipotel %></td>
+        <td><%= general.email %></td>
+        <td><%= general.domicilio %></td>
+        <td><%= general.colonia %></td>
+        <td><%= general.estudios %></td>
+        <td><%= general.rolfamiliar %></td>
+        <td><%= general.profesion %></td>
+        <td><%= general.id_estructura %></td>
+        <td><%= general.id_campaign %></td>
+        <td><%=l general.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_general_path(general), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      general_path(general),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<br />
-
-<%= link_to 'New General', new_general_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_general_path,
+            :class => 'btn btn-primary' %>

@@ -1,70 +1,43 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = @general.class -%>
+<h1><%=t '.title', :default => model_class.model_name.human %></h1>
 
-<p>
-  <b>Nombre:</b>
-  <%= @general.nombre %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:nombre) %>:</strong></dt>
+  <dd><%= @general.nombre %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:paterno) %>:</strong></dt>
+  <dd><%= @general.paterno %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:materno) %>:</strong></dt>
+  <dd><%= @general.materno %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:telefono) %>:</strong></dt>
+  <dd><%= @general.telefono %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipotel) %>:</strong></dt>
+  <dd><%= @general.tipotel %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @general.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:domicilio) %>:</strong></dt>
+  <dd><%= @general.domicilio %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:colonia) %>:</strong></dt>
+  <dd><%= @general.colonia %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:estudios) %>:</strong></dt>
+  <dd><%= @general.estudios %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:rolfamiliar) %>:</strong></dt>
+  <dd><%= @general.rolfamiliar %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:profesion) %>:</strong></dt>
+  <dd><%= @general.profesion %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:id_estructura) %>:</strong></dt>
+  <dd><%= @general.id_estructura %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:id_campaign) %>:</strong></dt>
+  <dd><%= @general.id_campaign %></dd>
+</dl>
 
-<p>
-  <b>Paterno:</b>
-  <%= @general.paterno %>
-</p>
-
-<p>
-  <b>Materno:</b>
-  <%= @general.materno %>
-</p>
-
-<p>
-  <b>Telefono:</b>
-  <%= @general.telefono %>
-</p>
-
-<p>
-  <b>Tipotel:</b>
-  <%= @general.tipotel %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @general.email %>
-</p>
-
-<p>
-  <b>Domicilio:</b>
-  <%= @general.domicilio %>
-</p>
-
-<p>
-  <b>Colonia:</b>
-  <%= @general.colonia %>
-</p>
-
-<p>
-  <b>Estudios:</b>
-  <%= @general.estudios %>
-</p>
-
-<p>
-  <b>Rolfamiliar:</b>
-  <%= @general.rolfamiliar %>
-</p>
-
-<p>
-  <b>Profesion:</b>
-  <%= @general.profesion %>
-</p>
-
-<p>
-  <b>Id estructura:</b>
-  <%= @general.id_estructura %>
-</p>
-
-<p>
-  <b>Id campaign:</b>
-  <%= @general.id_campaign %>
-</p>
-
-
-<%= link_to 'Edit', edit_general_path(@general) %> |
-<%= link_to 'Back', generals_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              generals_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_general_path(@general), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              general_path(@general),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>

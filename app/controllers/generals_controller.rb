@@ -1,4 +1,8 @@
-class GeneralsController < ApplicationController
+class GeneralsController < ApplicationController  
+  
+  #Valída Sesiones de Usuarios
+  before_filter :authenticate_user!,  :user_signed_in?
+
   # GET /generals
   # GET /generals.json
   def index
