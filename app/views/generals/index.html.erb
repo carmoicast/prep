@@ -1,0 +1,47 @@
+<h1>Listing generals</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Paterno</th>
+    <th>Materno</th>
+    <th>Telefono</th>
+    <th>Tipotel</th>
+    <th>Email</th>
+    <th>Domicilio</th>
+    <th>Colonia</th>
+    <th>Estudios</th>
+    <th>Rolfamiliar</th>
+    <th>Profesion</th>
+    <th>Id estructura</th>
+    <th>Id campaign</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @generals.each do |general| %>
+  <tr>
+    <td><%= general.nombre %></td>
+    <td><%= general.paterno %></td>
+    <td><%= general.materno %></td>
+    <td><%= general.telefono %></td>
+    <td><%= general.tipotel %></td>
+    <td><%= general.email %></td>
+    <td><%= general.domicilio %></td>
+    <td><%= general.colonia %></td>
+    <td><%= general.estudios %></td>
+    <td><%= general.rolfamiliar %></td>
+    <td><%= general.profesion %></td>
+    <td><%= general.id_estructura %></td>
+    <td><%= general.id_campaign %></td>
+    <td><%= link_to 'Show', general %></td>
+    <td><%= link_to 'Edit', edit_general_path(general) %></td>
+    <td><%= link_to 'Destroy', general, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New General', new_general_path %>

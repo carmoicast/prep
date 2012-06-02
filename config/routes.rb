@@ -1,7 +1,16 @@
 Encuentas::Application.routes.draw do
+
+
+  resources :generals
+
+  devise_for :admins
+
   devise_for :users
 
+
   get "home/index"
+  
+
   root :to => 'home#index'
   
 
