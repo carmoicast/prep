@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  paterno: MyString
+  materno: MyString
+  nombre: MyString
+  parentesco: MyString
+  edad: 1
+  id_general: 1
+
+two:
+  paterno: MyString
+  materno: MyString
+  nombre: MyString
+  parentesco: MyString
+  edad: 1
+  id_general: 1

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Paterno:</b>
+  <%= @familystructure.paterno %>
+</p>
+
+<p>
+  <b>Materno:</b>
+  <%= @familystructure.materno %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @familystructure.nombre %>
+</p>
+
+<p>
+  <b>Parentesco:</b>
+  <%= @familystructure.parentesco %>
+</p>
+
+<p>
+  <b>Edad:</b>
+  <%= @familystructure.edad %>
+</p>
+
+<p>
+  <b>Id general:</b>
+  <%= @familystructure.id_general %>
+</p>
+
+
+<%= link_to 'Edit', edit_familystructure_path(@familystructure) %> |
+<%= link_to 'Back', familystructures_path %>

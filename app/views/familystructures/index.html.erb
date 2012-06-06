@@ -1,0 +1,33 @@
+<h1>Listing familystructures</h1>
+
+<table>
+  <tr>
+    <th>Paterno</th>
+    <th>Materno</th>
+    <th>Nombre</th>
+    <th>Parentesco</th>
+    <th>Edad</th>
+    <th>Id general</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @familystructures.each do |familystructure| %>
+  <tr>
+    <td><%= familystructure.paterno %></td>
+    <td><%= familystructure.materno %></td>
+    <td><%= familystructure.nombre %></td>
+    <td><%= familystructure.parentesco %></td>
+    <td><%= familystructure.edad %></td>
+    <td><%= familystructure.id_general %></td>
+    <td><%= link_to 'Show', familystructure %></td>
+    <td><%= link_to 'Edit', edit_familystructure_path(familystructure) %></td>
+    <td><%= link_to 'Destroy', familystructure, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Familystructure', new_familystructure_path %>

@@ -1,6 +1,8 @@
 Encuentas::Application.routes.draw do
 
 
+  resources :familystructures
+
   resources :generals
 
   devise_for :admins
