@@ -1,5 +1,5 @@
 <%- model_class = General.new.class -%>
-<h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+<h1>Datos Generales</h1>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -7,17 +7,7 @@
       <th><%= model_class.human_attribute_name(:nombre) %></th>
       <th><%= model_class.human_attribute_name(:paterno) %></th>
       <th><%= model_class.human_attribute_name(:materno) %></th>
-      <th><%= model_class.human_attribute_name(:telefono) %></th>
-      <th><%= model_class.human_attribute_name(:tipotel) %></th>
-      <th><%= model_class.human_attribute_name(:email) %></th>
-      <th><%= model_class.human_attribute_name(:domicilio) %></th>
-      <th><%= model_class.human_attribute_name(:colonia) %></th>
-      <th><%= model_class.human_attribute_name(:estudios) %></th>
-      <th><%= model_class.human_attribute_name(:rolfamiliar) %></th>
-      <th><%= model_class.human_attribute_name(:profesion) %></th>
-      <th><%= model_class.human_attribute_name(:id_estructura) %></th>
-      <th><%= model_class.human_attribute_name(:id_campaign) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+    
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -27,18 +17,7 @@
         <td><%= link_to general.id, general_path(general) %></td>
         <td><%= general.nombre %></td>
         <td><%= general.paterno %></td>
-        <td><%= general.materno %></td>
-        <td><%= general.telefono %></td>
-        <td><%= general.tipotel %></td>
-        <td><%= general.email %></td>
-        <td><%= general.domicilio %></td>
-        <td><%= general.colonia %></td>
-        <td><%= general.estudios %></td>
-        <td><%= general.rolfamiliar %></td>
-        <td><%= general.profesion %></td>
-        <td><%= general.id_estructura %></td>
-        <td><%= general.id_campaign %></td>
-        <td><%=l general.created_at %></td>
+
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_general_path(general), :class => 'btn btn-mini' %>
@@ -53,6 +32,6 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to t('.Nuevo', :default => t("helpers.links.new")),
             new_general_path,
             :class => 'btn btn-primary' %>
