@@ -1,0 +1,201 @@
+<%= form_for(@poll) do |f| %>
+  <% if @poll.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@poll.errors.count, "error") %> prohibited this poll from being saved:</h2>
+
+      <ul>
+      <% @poll.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :paterno %><br />
+    <%= f.text_field :paterno %>
+  </div>
+  <div class="field">
+    <%= f.label :materno %><br />
+    <%= f.text_field :materno %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br />
+    <%= f.number_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :correo %><br />
+    <%= f.text_field :correo %>
+  </div>
+  <div class="field">
+    <%= f.label :domicilio %><br />
+    <%= f.text_area :domicilio %>
+  </div>
+  <div class="field">
+    <%= f.label :estudio %><br />
+    <%= f.number_field :estudio %>
+  </div>
+  <div class="field">
+    <%= f.label :rol %><br />
+    <%= f.text_field :rol %>
+  </div>
+  <div class="field">
+    <%= f.label :profesion %><br />
+    <%= f.text_field :profesion %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_uno %><br />
+    <%= f.text_field :nombre_uno %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_uno %><br />
+    <%= f.number_field :tipo_uno %>
+  </div>
+  <div class="field">
+    <%= f.label :edad_uno %><br />
+    <%= f.number_field :edad_uno %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_dos %><br />
+    <%= f.text_field :nombre_dos %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_dos %><br />
+    <%= f.number_field :tipo_dos %>
+  </div>
+  <div class="field">
+    <%= f.label :edad_dos %><br />
+    <%= f.number_field :edad_dos %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_tres %><br />
+    <%= f.text_field :nombre_tres %>
+  </div>
+  <div class="field">
+    <%= f.label :edad_tres %><br />
+    <%= f.number_field :edad_tres %>
+  </div>
+  <div class="field">
+    <%= f.label :edad_tres %><br />
+    <%= f.number_field :edad_tres %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_cuatro %><br />
+    <%= f.text_field :nombre_cuatro %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_cuatro %><br />
+    <%= f.number_field :tipo_cuatro %>
+  </div>
+  <div class="field">
+    <%= f.label :edad_cuatro %><br />
+    <%= f.number_field :edad_cuatro %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_cinco %><br />
+    <%= f.text_field :nombre_cinco %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_cinco %><br />
+    <%= f.number_field :tipo_cinco %>
+  </div>
+  <div class="field">
+    <%= f.label :edad_cinco %><br />
+    <%= f.number_field :edad_cinco %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_seis %><br />
+    <%= f.text_field :nombre_seis %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_seis %><br />
+    <%= f.number_field :tipo_seis %>
+  </div>
+  <div class="field">
+    <%= f.label :edad_seis %><br />
+    <%= f.number_field :edad_seis %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_siete %><br />
+    <%= f.text_field :nombre_siete %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_siete %><br />
+    <%= f.number_field :tipo_siete %>
+  </div>
+  <div class="field">
+    <%= f.label :edad_siete %><br />
+    <%= f.number_field :edad_siete %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_ocho %><br />
+    <%= f.text_field :nombre_ocho %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_ocho %><br />
+    <%= f.number_field :tipo_ocho %>
+  </div>
+  <div class="field">
+    <%= f.label :edad_ocho %><br />
+    <%= f.number_field :edad_ocho %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_nueve %><br />
+    <%= f.text_field :nombre_nueve %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_nueve %><br />
+    <%= f.text_field :tipo_nueve %>
+  </div>
+  <div class="field">
+    <%= f.label :edad_nueve %><br />
+    <%= f.number_field :edad_nueve %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_diez %><br />
+    <%= f.text_field :nombre_diez %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_diez %><br />
+    <%= f.number_field :tipo_diez %>
+  </div>
+  <div class="field">
+    <%= f.label :edad_diez %><br />
+    <%= f.number_field :edad_diez %>
+  </div>
+  <div class="field">
+    <%= f.label :posicionamiento_a %><br />
+    <%= f.check_box :posicionamiento_a %>
+  </div>
+  <div class="field">
+    <%= f.label :posicionamiento_b %><br />
+    <%= f.check_box :posicionamiento_b %>
+  </div>
+  <div class="field">
+    <%= f.label :posicionamiento_c %><br />
+    <%= f.check_box :posicionamiento_c %>
+  </div>
+  <div class="field">
+    <%= f.label :posicionamiento_d %><br />
+    <%= f.check_box :posicionamiento_d %>
+  </div>
+  <div class="field">
+    <%= f.label :posicionamiento_e %><br />
+    <%= f.check_box :posicionamiento_e %>
+  </div>
+  <div class="field">
+    <%= f.label :pregunta_a %><br />
+    <%= f.check_box :pregunta_a %>
+  </div>
+  <div class="field">
+    <%= f.label :pregunta_observaciones %><br />
+    <%= f.text_area :pregunta_observaciones %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
