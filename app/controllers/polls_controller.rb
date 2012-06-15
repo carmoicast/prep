@@ -36,11 +36,10 @@ class PollsController < ApplicationController
 
     respond_to do |format|
       if @poll.save
-        format.html { redirect_to @poll, notice: 'La encuesta fue creada exitosamente.' }
-        format.json { render json: @poll, status: :created, location: @poll }
+
+        format.html { redirect_to poll_steps_path }
       else
         format.html { render action: "new" }
-        format.json { render json: @poll.errors, status: :unprocessable_entity }
       end
     end
   end
