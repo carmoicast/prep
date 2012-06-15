@@ -4,7 +4,8 @@ class PollStepsController < ApplicationController
   steps :estructura, :encuesta
   
   def show
-    render_wizard 
+    @poll = Poll.new
+    render_wizard  
   end
   
 end
