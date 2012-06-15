@@ -1,21 +1,15 @@
 class GeneralsController < ApplicationController  
   
-  #Valída Sesiones de Usuarios
   before_filter :authenticate_user!,  :user_signed_in?
 
-  # GET /generals
-  # GET /generals.json
   def index
     @generals = General.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @generals }
     end
   end
 
-  # GET /generals/1
-  # GET /generals/1.json
   def show
     @general = General.find(params[:id])
 
@@ -25,8 +19,6 @@ class GeneralsController < ApplicationController
     end
   end
 
-  # GET /generals/new
-  # GET /generals/new.json
   def new
     @general = General.new
 
@@ -36,13 +28,10 @@ class GeneralsController < ApplicationController
     end
   end
 
-  # GET /generals/1/edit
   def edit
     @general = General.find(params[:id])
   end
 
-  # POST /generals
-  # POST /generals.json
   def create
     @general = General.new(params[:general])
 
@@ -57,8 +46,6 @@ class GeneralsController < ApplicationController
     end
   end
 
-  # PUT /generals/1
-  # PUT /generals/1.json
   def update
     @general = General.find(params[:id])
 
@@ -73,8 +60,6 @@ class GeneralsController < ApplicationController
     end
   end
 
-  # DELETE /generals/1
-  # DELETE /generals/1.json
   def destroy
     @general = General.find(params[:id])
     @general.destroy

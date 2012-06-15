@@ -1,53 +1,13 @@
-<h1>Listing polls</h1>
+<h1>Lista de encuestas</h1>
 
 <table>
   <tr>
     <th>Paterno</th>
     <th>Materno</th>
     <th>Nombre</th>
-    <th>Telefono</th>
+    <th>Teléfono</th>
     <th>Correo</th>
-    <th>Domicilio</th>
-    <th>Estudio</th>
-    <th>Rol</th>
-    <th>Profesion</th>
-    <th>Nombre uno</th>
-    <th>Tipo uno</th>
-    <th>Edad uno</th>
-    <th>Nombre dos</th>
-    <th>Tipo dos</th>
-    <th>Edad dos</th>
-    <th>Nombre tres</th>
-    <th>Edad tres</th>
-    <th>Edad tres</th>
-    <th>Nombre cuatro</th>
-    <th>Tipo cuatro</th>
-    <th>Edad cuatro</th>
-    <th>Nombre cinco</th>
-    <th>Tipo cinco</th>
-    <th>Edad cinco</th>
-    <th>Nombre seis</th>
-    <th>Tipo seis</th>
-    <th>Edad seis</th>
-    <th>Nombre siete</th>
-    <th>Tipo siete</th>
-    <th>Edad siete</th>
-    <th>Nombre ocho</th>
-    <th>Tipo ocho</th>
-    <th>Edad ocho</th>
-    <th>Nombre nueve</th>
-    <th>Tipo nueve</th>
-    <th>Edad nueve</th>
-    <th>Nombre diez</th>
-    <th>Tipo diez</th>
-    <th>Edad diez</th>
-    <th>Posicionamiento a</th>
-    <th>Posicionamiento b</th>
-    <th>Posicionamiento c</th>
-    <th>Posicionamiento d</th>
-    <th>Posicionamiento e</th>
-    <th>Pregunta a</th>
-    <th>Pregunta observaciones</th>
+
     <th></th>
     <th></th>
     <th></th>
@@ -55,52 +15,13 @@
 
 <% @polls.each do |poll| %>
   <tr>
+	<td><%= poll.id %></td>
     <td><%= poll.paterno %></td>
     <td><%= poll.materno %></td>
     <td><%= poll.nombre %></td>
     <td><%= poll.telefono %></td>
     <td><%= poll.correo %></td>
-    <td><%= poll.domicilio %></td>
-    <td><%= poll.estudio %></td>
-    <td><%= poll.rol %></td>
-    <td><%= poll.profesion %></td>
-    <td><%= poll.nombre_uno %></td>
-    <td><%= poll.tipo_uno %></td>
-    <td><%= poll.edad_uno %></td>
-    <td><%= poll.nombre_dos %></td>
-    <td><%= poll.tipo_dos %></td>
-    <td><%= poll.edad_dos %></td>
-    <td><%= poll.nombre_tres %></td>
-    <td><%= poll.edad_tres %></td>
-    <td><%= poll.edad_tres %></td>
-    <td><%= poll.nombre_cuatro %></td>
-    <td><%= poll.tipo_cuatro %></td>
-    <td><%= poll.edad_cuatro %></td>
-    <td><%= poll.nombre_cinco %></td>
-    <td><%= poll.tipo_cinco %></td>
-    <td><%= poll.edad_cinco %></td>
-    <td><%= poll.nombre_seis %></td>
-    <td><%= poll.tipo_seis %></td>
-    <td><%= poll.edad_seis %></td>
-    <td><%= poll.nombre_siete %></td>
-    <td><%= poll.tipo_siete %></td>
-    <td><%= poll.edad_siete %></td>
-    <td><%= poll.nombre_ocho %></td>
-    <td><%= poll.tipo_ocho %></td>
-    <td><%= poll.edad_ocho %></td>
-    <td><%= poll.nombre_nueve %></td>
-    <td><%= poll.tipo_nueve %></td>
-    <td><%= poll.edad_nueve %></td>
-    <td><%= poll.nombre_diez %></td>
-    <td><%= poll.tipo_diez %></td>
-    <td><%= poll.edad_diez %></td>
-    <td><%= poll.posicionamiento_a %></td>
-    <td><%= poll.posicionamiento_b %></td>
-    <td><%= poll.posicionamiento_c %></td>
-    <td><%= poll.posicionamiento_d %></td>
-    <td><%= poll.posicionamiento_e %></td>
-    <td><%= poll.pregunta_a %></td>
-    <td><%= poll.pregunta_observaciones %></td>
+    
     <td><%= link_to 'Show', poll %></td>
     <td><%= link_to 'Edit', edit_poll_path(poll) %></td>
     <td><%= link_to 'Destroy', poll, confirm: 'Are you sure?', method: :delete %></td>

@@ -1,6 +1,5 @@
 class PollsController < ApplicationController
-  # GET /polls
-  # GET /polls.json
+  
   def index
     @polls = Poll.all
 
@@ -10,8 +9,6 @@ class PollsController < ApplicationController
     end
   end
 
-  # GET /polls/1
-  # GET /polls/1.json
   def show
     @poll = Poll.find(params[:id])
 
@@ -21,8 +18,6 @@ class PollsController < ApplicationController
     end
   end
 
-  # GET /polls/new
-  # GET /polls/new.json
   def new
     @poll = Poll.new
 
@@ -32,19 +27,16 @@ class PollsController < ApplicationController
     end
   end
 
-  # GET /polls/1/edit
   def edit
     @poll = Poll.find(params[:id])
   end
 
-  # POST /polls
-  # POST /polls.json
   def create
     @poll = Poll.new(params[:poll])
 
     respond_to do |format|
       if @poll.save
-        format.html { redirect_to @poll, notice: 'Poll was successfully created.' }
+        format.html { redirect_to @poll, notice: 'La encuesta fue creada exitosamente.' }
         format.json { render json: @poll, status: :created, location: @poll }
       else
         format.html { render action: "new" }
@@ -53,14 +45,12 @@ class PollsController < ApplicationController
     end
   end
 
-  # PUT /polls/1
-  # PUT /polls/1.json
   def update
     @poll = Poll.find(params[:id])
 
     respond_to do |format|
       if @poll.update_attributes(params[:poll])
-        format.html { redirect_to @poll, notice: 'Poll was successfully updated.' }
+        format.html { redirect_to @poll, notice: 'La encuesta se actualizo correctamente' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -69,8 +59,6 @@ class PollsController < ApplicationController
     end
   end
 
-  # DELETE /polls/1
-  # DELETE /polls/1.json
   def destroy
     @poll = Poll.find(params[:id])
     @poll.destroy
