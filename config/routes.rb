@@ -6,6 +6,8 @@ Encuentas::Application.routes.draw do
   resources :familystructures
 
   resources :generals
+  
+  resources :poll_steps
 
   devise_for :admins
 

@@ -1,235 +1,107 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = @poll.class -%>
+<h1><%=t '.title', :default => model_class.model_name.human %></h1>
 
-<p>
-  <b>Paterno:</b>
-  <%= @poll.paterno %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:paterno) %>:</strong></dt>
+  <dd><%= @poll.paterno %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:materno) %>:</strong></dt>
+  <dd><%= @poll.materno %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nombre) %>:</strong></dt>
+  <dd><%= @poll.nombre %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:telefono) %>:</strong></dt>
+  <dd><%= @poll.telefono %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:correo) %>:</strong></dt>
+  <dd><%= @poll.correo %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:domicilio) %>:</strong></dt>
+  <dd><%= @poll.domicilio %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:estudio) %>:</strong></dt>
+  <dd><%= @poll.estudio %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:rol) %>:</strong></dt>
+  <dd><%= @poll.rol %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:profesion) %>:</strong></dt>
+  <dd><%= @poll.profesion %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nombre_uno) %>:</strong></dt>
+  <dd><%= @poll.nombre_uno %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipo_uno) %>:</strong></dt>
+  <dd><%= @poll.tipo_uno %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edad_uno) %>:</strong></dt>
+  <dd><%= @poll.edad_uno %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nombre_dos) %>:</strong></dt>
+  <dd><%= @poll.nombre_dos %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipo_dos) %>:</strong></dt>
+  <dd><%= @poll.tipo_dos %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edad_dos) %>:</strong></dt>
+  <dd><%= @poll.edad_dos %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nombre_tres) %>:</strong></dt>
+  <dd><%= @poll.nombre_tres %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edad_tres) %>:</strong></dt>
+  <dd><%= @poll.edad_tres %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nombre_cuatro) %>:</strong></dt>
+  <dd><%= @poll.nombre_cuatro %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipo_cuatro) %>:</strong></dt>
+  <dd><%= @poll.tipo_cuatro %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edad_cuatro) %>:</strong></dt>
+  <dd><%= @poll.edad_cuatro %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nombre_cinco) %>:</strong></dt>
+  <dd><%= @poll.nombre_cinco %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipo_cinco) %>:</strong></dt>
+  <dd><%= @poll.tipo_cinco %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edad_cinco) %>:</strong></dt>
+  <dd><%= @poll.edad_cinco %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nombre_seis) %>:</strong></dt>
+  <dd><%= @poll.nombre_seis %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipo_seis) %>:</strong></dt>
+  <dd><%= @poll.tipo_seis %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edad_seis) %>:</strong></dt>
+  <dd><%= @poll.edad_seis %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nombre_siete) %>:</strong></dt>
+  <dd><%= @poll.nombre_siete %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipo_siete) %>:</strong></dt>
+  <dd><%= @poll.tipo_siete %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edad_siete) %>:</strong></dt>
+  <dd><%= @poll.edad_siete %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nombre_ocho) %>:</strong></dt>
+  <dd><%= @poll.nombre_ocho %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipo_ocho) %>:</strong></dt>
+  <dd><%= @poll.tipo_ocho %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edad_ocho) %>:</strong></dt>
+  <dd><%= @poll.edad_ocho %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nombre_nueve) %>:</strong></dt>
+  <dd><%= @poll.nombre_nueve %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipo_nueve) %>:</strong></dt>
+  <dd><%= @poll.tipo_nueve %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edad_nueve) %>:</strong></dt>
+  <dd><%= @poll.edad_nueve %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nombre_diez) %>:</strong></dt>
+  <dd><%= @poll.nombre_diez %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipo_diez) %>:</strong></dt>
+  <dd><%= @poll.tipo_diez %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edad_diez) %>:</strong></dt>
+  <dd><%= @poll.edad_diez %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:posicionamiento_a) %>:</strong></dt>
+  <dd><%= @poll.posicionamiento_a %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:posicionamiento_b) %>:</strong></dt>
+  <dd><%= @poll.posicionamiento_b %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:posicionamiento_c) %>:</strong></dt>
+  <dd><%= @poll.posicionamiento_c %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:posicionamiento_d) %>:</strong></dt>
+  <dd><%= @poll.posicionamiento_d %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:posicionamiento_e) %>:</strong></dt>
+  <dd><%= @poll.posicionamiento_e %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pregunta_a) %>:</strong></dt>
+  <dd><%= @poll.pregunta_a %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pregunta_observaciones) %>:</strong></dt>
+  <dd><%= @poll.pregunta_observaciones %></dd>
+</dl>
 
-<p>
-  <b>Materno:</b>
-  <%= @poll.materno %>
-</p>
-
-<p>
-  <b>Nombre:</b>
-  <%= @poll.nombre %>
-</p>
-
-<p>
-  <b>Telefono:</b>
-  <%= @poll.telefono %>
-</p>
-
-<p>
-  <b>Correo:</b>
-  <%= @poll.correo %>
-</p>
-
-<p>
-  <b>Domicilio:</b>
-  <%= @poll.domicilio %>
-</p>
-
-<p>
-  <b>Estudio:</b>
-  <%= @poll.estudio %>
-</p>
-
-<p>
-  <b>Rol:</b>
-  <%= @poll.rol %>
-</p>
-
-<p>
-  <b>Profesion:</b>
-  <%= @poll.profesion %>
-</p>
-
-<p>
-  <b>Nombre uno:</b>
-  <%= @poll.nombre_uno %>
-</p>
-
-<p>
-  <b>Tipo uno:</b>
-  <%= @poll.tipo_uno %>
-</p>
-
-<p>
-  <b>Edad uno:</b>
-  <%= @poll.edad_uno %>
-</p>
-
-<p>
-  <b>Nombre dos:</b>
-  <%= @poll.nombre_dos %>
-</p>
-
-<p>
-  <b>Tipo dos:</b>
-  <%= @poll.tipo_dos %>
-</p>
-
-<p>
-  <b>Edad dos:</b>
-  <%= @poll.edad_dos %>
-</p>
-
-<p>
-  <b>Nombre tres:</b>
-  <%= @poll.nombre_tres %>
-</p>
-
-<p>
-  <b>Edad tres:</b>
-  <%= @poll.edad_tres %>
-</p>
-
-<p>
-  <b>Edad tres:</b>
-  <%= @poll.edad_tres %>
-</p>
-
-<p>
-  <b>Nombre cuatro:</b>
-  <%= @poll.nombre_cuatro %>
-</p>
-
-<p>
-  <b>Tipo cuatro:</b>
-  <%= @poll.tipo_cuatro %>
-</p>
-
-<p>
-  <b>Edad cuatro:</b>
-  <%= @poll.edad_cuatro %>
-</p>
-
-<p>
-  <b>Nombre cinco:</b>
-  <%= @poll.nombre_cinco %>
-</p>
-
-<p>
-  <b>Tipo cinco:</b>
-  <%= @poll.tipo_cinco %>
-</p>
-
-<p>
-  <b>Edad cinco:</b>
-  <%= @poll.edad_cinco %>
-</p>
-
-<p>
-  <b>Nombre seis:</b>
-  <%= @poll.nombre_seis %>
-</p>
-
-<p>
-  <b>Tipo seis:</b>
-  <%= @poll.tipo_seis %>
-</p>
-
-<p>
-  <b>Edad seis:</b>
-  <%= @poll.edad_seis %>
-</p>
-
-<p>
-  <b>Nombre siete:</b>
-  <%= @poll.nombre_siete %>
-</p>
-
-<p>
-  <b>Tipo siete:</b>
-  <%= @poll.tipo_siete %>
-</p>
-
-<p>
-  <b>Edad siete:</b>
-  <%= @poll.edad_siete %>
-</p>
-
-<p>
-  <b>Nombre ocho:</b>
-  <%= @poll.nombre_ocho %>
-</p>
-
-<p>
-  <b>Tipo ocho:</b>
-  <%= @poll.tipo_ocho %>
-</p>
-
-<p>
-  <b>Edad ocho:</b>
-  <%= @poll.edad_ocho %>
-</p>
-
-<p>
-  <b>Nombre nueve:</b>
-  <%= @poll.nombre_nueve %>
-</p>
-
-<p>
-  <b>Tipo nueve:</b>
-  <%= @poll.tipo_nueve %>
-</p>
-
-<p>
-  <b>Edad nueve:</b>
-  <%= @poll.edad_nueve %>
-</p>
-
-<p>
-  <b>Nombre diez:</b>
-  <%= @poll.nombre_diez %>
-</p>
-
-<p>
-  <b>Tipo diez:</b>
-  <%= @poll.tipo_diez %>
-</p>
-
-<p>
-  <b>Edad diez:</b>
-  <%= @poll.edad_diez %>
-</p>
-
-<p>
-  <b>Posicionamiento a:</b>
-  <%= @poll.posicionamiento_a %>
-</p>
-
-<p>
-  <b>Posicionamiento b:</b>
-  <%= @poll.posicionamiento_b %>
-</p>
-
-<p>
-  <b>Posicionamiento c:</b>
-  <%= @poll.posicionamiento_c %>
-</p>
-
-<p>
-  <b>Posicionamiento d:</b>
-  <%= @poll.posicionamiento_d %>
-</p>
-
-<p>
-  <b>Posicionamiento e:</b>
-  <%= @poll.posicionamiento_e %>
-</p>
-
-<p>
-  <b>Pregunta a:</b>
-  <%= @poll.pregunta_a %>
-</p>
-
-<p>
-  <b>Pregunta observaciones:</b>
-  <%= @poll.pregunta_observaciones %>
-</p>
-
-
-<%= link_to 'Edit', edit_poll_path(@poll) %> |
-<%= link_to 'Back', polls_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              polls_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_poll_path(@poll), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              poll_path(@poll),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>
