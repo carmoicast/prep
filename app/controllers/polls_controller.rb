@@ -37,7 +37,9 @@ class PollsController < ApplicationController
     respond_to do |format|
       if @poll.save
 
-        format.html { redirect_to poll_steps_path }
+        format.html { redirect_to @poll }
+#        format.html { redirect_to @general, notice: 'General was successfully created.' }
+        
       else
         format.html { render action: "new" }
       end

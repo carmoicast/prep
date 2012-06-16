@@ -14,16 +14,14 @@
   <tbody>
     <% @polls.each do |poll| %>
       <tr>
-        <td><%= link_to poll.id, poll_path(poll) %></td>
+        <td><%= link_to poll.id, edit_poll_path(poll) %></td>
         <td><%= poll.paterno %></td>
         <td><%= poll.materno %></td>
         <td><%= poll.nombre %></td>
         <td><%= poll.telefono %></td>       
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_poll_path(poll), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      poll_path(poll),
+          <%= link_to "Editar", edit_poll_path(poll), :class => 'btn btn-mini' %>
+          <%= link_to "Eliminar",poll_path(poll),
                       :method => :delete,
                       :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
                       :class => 'btn btn-mini btn-danger' %>
@@ -33,6 +31,6 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to "Nuevo",
             new_poll_path,
             :class => 'btn btn-primary' %>

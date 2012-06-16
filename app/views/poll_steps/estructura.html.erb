@@ -30,8 +30,10 @@ Edad
 3. Nombre
   <div class="controls">
     <%= f.text_field :nombre_tres, :class => 'text_field' %>
+Tipo Familiar
+    <%= f.select :tipo_tres, [["Ninguna", "1"], ["Padre", "2"], ["Madre", "3"], ["Hijo", "4"], ["Hija", "5"],  ["Abuela", "6"], ["Abuelo", "7"], ["Nieto", "8"],["Nieta", "9"],["Nuero", "10"], ["Nuera", "11"], ["Yerno", "12"], ["Sobrino", "13"], ["Sobrina", "14"],["Otro", "14"]], :class => 'text_field' %>
 Edad
-    <%= f.number_field :edad_tres, :class => 'text_field' %>
+    <%= f.text_field :edad_tres, :class => 'text_field' %>
 
   </div>
 </div>
@@ -117,9 +119,7 @@ Edad
 </div>
 
 <div class="form-actions">
-   <%= f.submit nil, :class => 'btn btn-primary' %>
-   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-               polls_path, :class => 'btn' %>
+   <%= f.submit "Continuar", :class => 'btn btn-primary' %>
  </div>
 
 

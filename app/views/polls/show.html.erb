@@ -1,7 +1,8 @@
 <%- model_class = @poll.class -%>
-<h1><%=t '.title', :default => model_class.model_name.human %></h1>
+<h1>Ver Encuesta</h1>
 
 <dl class="dl-horizontal">
+<h3>Datos personales</h3>
   <dt><strong><%= model_class.human_attribute_name(:paterno) %>:</strong></dt>
   <dd><%= @poll.paterno %></dd>
   <dt><strong><%= model_class.human_attribute_name(:materno) %>:</strong></dt>
@@ -20,9 +21,10 @@
   <dd><%= @poll.rol %></dd>
   <dt><strong><%= model_class.human_attribute_name(:profesion) %>:</strong></dt>
   <dd><%= @poll.profesion %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:nombre_uno) %>:</strong></dt>
+<h3>Estructura Familiar</h3>
+  <dt><strong>1. Nombre:</strong></dt>
   <dd><%= @poll.nombre_uno %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:tipo_uno) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:tipo_uno) %>:<%= @poll.tipo_uno %></strong></dt>
   <dd><%= @poll.tipo_uno %></dd>
   <dt><strong><%= model_class.human_attribute_name(:edad_uno) %>:</strong></dt>
   <dd><%= @poll.edad_uno %></dd>
@@ -78,6 +80,7 @@
   <dd><%= @poll.tipo_diez %></dd>
   <dt><strong><%= model_class.human_attribute_name(:edad_diez) %>:</strong></dt>
   <dd><%= @poll.edad_diez %></dd>
+<h3>Encuesta</h3>
   <dt><strong><%= model_class.human_attribute_name(:posicionamiento_a) %>:</strong></dt>
   <dd><%= @poll.posicionamiento_a %></dd>
   <dt><strong><%= model_class.human_attribute_name(:posicionamiento_b) %>:</strong></dt>
@@ -99,7 +102,7 @@
               polls_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_poll_path(@poll), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+  <%= link_to t("'.destroy'", :default => t("helpers.links.destroy")),
               poll_path(@poll),
               :method => 'delete',
               :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
