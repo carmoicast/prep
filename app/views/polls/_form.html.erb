@@ -20,7 +20,7 @@
   <div class="control-group">
     <%= f.label :telefono, :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :telefono, :class => 'number_field' %>
+      <%= f.text_field :telefono, :class => 'number_field' %>
     </div>
   </div>
   <div class="control-group">
@@ -38,7 +38,9 @@
   <div class="control-group">
     <%= f.label :estudio, :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :estudio, :class => 'number_field' %>
+      <%= f.select :estudio, [["Ninguna", "1"], ["Primaria", "2"], ["Segundaria", "3"], ["Prepa", "4"], ["Universidad", "5"],  ["Otro", "6"]  ], :class => 'number_field' %>
+
+
     </div>
   </div>
   <div class="control-group">
@@ -53,7 +55,6 @@
       <%= f.text_field :profesion, :class => 'text_field' %>
     </div>
   </div>
-
 
 
   <div class="form-actions">

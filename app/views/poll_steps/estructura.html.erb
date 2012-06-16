@@ -1,193 +1,118 @@
+<div class="page-header">
+<h1>Estructura Familiar</h1>
+</div>
+
 <%= form_for @poll,  url: wizard_path do |f| %> 
 
-<h1>Estructura Familiar</h1>
 <div class="control-group">
-  Nombre
+ 1. Nombre
   <div class="controls">
     <%= f.text_field :nombre_uno, :class => 'text_field' %>
 Tipo Familiar
-	<%= f.number_field :tipo_uno, :class => 'number_field' %>
+	<%= f.select :tipo_uno, [["Ninguna", "1"], ["Padre", "2"], ["Madre", "3"], ["Hijo", "4"], ["Hija", "5"],  ["Abuela", "6"], ["Abuelo", "7"], ["Nieto", "8"],["Nieta", "9"],["Nuero", "10"], ["Nuera", "11"], ["Yerno", "12"], ["Sobrino", "13"], ["Sobrina", "14"],["Otro", "14"]], :class => 'number_field' %>
 Edad
-	<%= f.number_field :edad_uno, :class => 'number_field' %>
+	<%= f.text_field :edad_uno, :class => 'text_field' %>
   </div>
 </div>
 
 <div class="control-group">
-  <%= f.label :tipo_uno, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :tipo_uno, :class => 'number_field' %>
-  </div>
-</div>
-
-<div class="control-group">
-  <%= f.label :edad_uno, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :edad_uno, :class => 'number_field' %>
-  </div>
-</div>
-
-<div class="control-group">
-  <%= f.label :nombre_dos, :class => 'control-label' %>
+2. Nombre
   <div class="controls">
     <%= f.text_field :nombre_dos, :class => 'text_field' %>
+Tipo Familiar
+    <%= f.select :tipo_dos,[["Ninguna", "1"], ["Padre", "2"], ["Madre", "3"], ["Hijo", "4"], ["Hija", "5"],  ["Abuela", "6"], ["Abuelo", "7"], ["Nieto", "8"],["Nieta", "9"],["Nuero", "10"], ["Nuera", "11"], ["Yerno", "12"], ["Sobrino", "13"], ["Sobrina", "14"],["Otro", "14"]], :class => 'number_field' %>
+Edad 
+    <%= f.text_field :edad_dos, :class => 'text_field' %>
   </div>
 </div>
 
 <div class="control-group">
-  <%= f.label :tipo_dos, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :tipo_dos, :class => 'number_field' %>
-  </div>
-</div>
-
-<div class="control-group">
-  <%= f.label :edad_dos, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :edad_dos, :class => 'number_field' %>
-  </div>
-</div>
-
-<div class="control-group">
-  <%= f.label :nombre_tres, :class => 'control-label' %>
+3. Nombre
   <div class="controls">
     <%= f.text_field :nombre_tres, :class => 'text_field' %>
+Edad
+    <%= f.number_field :edad_tres, :class => 'text_field' %>
+
   </div>
 </div>
 
 <div class="control-group">
-  <%= f.label :edad_tres, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :edad_tres, :class => 'number_field' %>
-  </div>
-</div>
-
-<div class="control-group">
-  <%= f.label :nombre_cuatro, :class => 'control-label' %>
-  <div class="controls">
+4. Nombre
+  <div class="controls">	
     <%= f.text_field :nombre_cuatro, :class => 'text_field' %>
+Tipo Familiar
+    <%= f.select :tipo_cuatro, [["Ninguna", "1"], ["Padre", "2"], ["Madre", "3"], ["Hijo", "4"], ["Hija", "5"],  ["Abuela", "6"], ["Abuelo", "7"], ["Nieto", "8"],["Nieta", "9"],["Nuero", "10"], ["Nuera", "11"], ["Yerno", "12"], ["Sobrino", "13"], ["Sobrina", "14"],["Otro", "14"]], :class => 'number_field' %>
+Edad
+    <%= f.text_field :edad_cuatro, :class => 'number_field' %>
   </div>
 </div>
 
-<div class="control-group">
-  <%= f.label :tipo_cuatro, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :tipo_cuatro, :class => 'number_field' %>
-  </div>
-</div>
+
 
 <div class="control-group">
-  <%= f.label :edad_cuatro, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :edad_cuatro, :class => 'number_field' %>
-  </div>
-</div>
-
-<div class="control-group">
-  <%= f.label :nombre_cinco, :class => 'control-label' %>
+5. Nombre
   <div class="controls">
     <%= f.text_field :nombre_cinco, :class => 'text_field' %>
+Tipo Familiar
+    <%= f.select :tipo_cinco, [["Ninguna", "1"], ["Padre", "2"], ["Madre", "3"], ["Hijo", "4"], ["Hija", "5"],  ["Abuela", "6"], ["Abuelo", "7"], ["Nieto", "8"],["Nieta", "9"],["Nuero", "10"], ["Nuera", "11"], ["Yerno", "12"], ["Sobrino", "13"], ["Sobrina", "14"],["Otro", "14"]], :class => 'number_field' %>
+Edad
+    <%= f.text_field :edad_cinco, :class => 'number_field' %>
   </div>
 </div>
+
 <div class="control-group">
-  <%= f.label :tipo_cinco, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :tipo_cinco, :class => 'number_field' %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label :edad_cinco, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :edad_cinco, :class => 'number_field' %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label :nombre_seis, :class => 'control-label' %>
+6. Nombre
   <div class="controls">
     <%= f.text_field :nombre_seis, :class => 'text_field' %>
+Tipo Familiar
+    <%= f.select :tipo_seis, [["Ninguna", "1"], ["Padre", "2"], ["Madre", "3"], ["Hijo", "4"], ["Hija", "5"],  ["Abuela", "6"], ["Abuelo", "7"], ["Nieto", "8"],["Nieta", "9"],["Nuero", "10"], ["Nuera", "11"], ["Yerno", "12"], ["Sobrino", "13"], ["Sobrina", "14"],["Otro", "14"]], :class => 'number_field' %>
+Edad
+    <%= f.text_field :edad_seis, :class => 'number_field' %>
   </div>
 </div>
+
 <div class="control-group">
-  <%= f.label :tipo_seis, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :tipo_seis, :class => 'number_field' %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label :edad_seis, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :edad_seis, :class => 'number_field' %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label :nombre_siete, :class => 'control-label' %>
+7. Nombre
   <div class="controls">
     <%= f.text_field :nombre_siete, :class => 'text_field' %>
+Tipo Familiar
+    <%= f.select :tipo_siete, [["Ninguna", "1"], ["Padre", "2"], ["Madre", "3"], ["Hijo", "4"], ["Hija", "5"],  ["Abuela", "6"], ["Abuelo", "7"], ["Nieto", "8"],["Nieta", "9"],["Nuero", "10"], ["Nuera", "11"], ["Yerno", "12"], ["Sobrino", "13"], ["Sobrina", "14"],["Otro", "14"]], :class => 'number_field' %>
+Edad
+    <%= f.text_field :edad_siete, :class => 'number_field' %>
+
   </div>
 </div>
+
 <div class="control-group">
-  <%= f.label :tipo_siete, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :tipo_siete, :class => 'number_field' %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label :edad_siete, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :edad_siete, :class => 'number_field' %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label :nombre_ocho, :class => 'control-label' %>
+8. Nombre
   <div class="controls">
     <%= f.text_field :nombre_ocho, :class => 'text_field' %>
+Tipo Familiar
+    <%= f.select :tipo_ocho, [["Ninguna", "1"], ["Padre", "2"], ["Madre", "3"], ["Hijo", "4"], ["Hija", "5"],  ["Abuela", "6"], ["Abuelo", "7"], ["Nieto", "8"],["Nieta", "9"],["Nuero", "10"], ["Nuera", "11"], ["Yerno", "12"], ["Sobrino", "13"], ["Sobrina", "14"],["Otro", "14"]], :class => 'number_field' %>
+Edad
+    <%= f.text_field :edad_ocho, :class => 'number_field' %>
   </div>
 </div>
+
 <div class="control-group">
-  <%= f.label :tipo_ocho, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :tipo_ocho, :class => 'number_field' %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label :edad_ocho, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :edad_ocho, :class => 'number_field' %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label :nombre_nueve, :class => 'control-label' %>
+9. Nombre
   <div class="controls">
     <%= f.text_field :nombre_nueve, :class => 'text_field' %>
+Tipo Familiar
+    <%= f.select :tipo_nueve,[["Ninguna", "1"], ["Padre", "2"], ["Madre", "3"], ["Hijo", "4"], ["Hija", "5"],  ["Abuela", "6"], ["Abuelo", "7"], ["Nieto", "8"],["Nieta", "9"],["Nuero", "10"], ["Nuera", "11"], ["Yerno", "12"], ["Sobrino", "13"], ["Sobrina", "14"],["Otro", "14"]], :class => 'text_field' %>
+Edad
+    <%= f.text_field :edad_nueve, :class => 'number_field' %>
   </div>
 </div>
+
 <div class="control-group">
-  <%= f.label :tipo_nueve, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.text_field :tipo_nueve, :class => 'text_field' %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label :edad_nueve, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :edad_nueve, :class => 'number_field' %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label :nombre_diez, :class => 'control-label' %>
+10. Nombre
   <div class="controls">
     <%= f.text_field :nombre_diez, :class => 'text_field' %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label :tipo_diez, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :tipo_diez, :class => 'number_field' %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label :edad_diez, :class => 'control-label' %>
-  <div class="controls">
-    <%= f.number_field :edad_diez, :class => 'number_field' %>
+Tipo Familiar
+	<%= f.select :tipo_diez, [["Ninguna", "1"], ["Padre", "2"], ["Madre", "3"], ["Hijo", "4"], ["Hija", "5"],  ["Abuela", "6"], ["Abuelo", "7"], ["Nieto", "8"],["Nieta", "9"],["Nuero", "10"], ["Nuera", "11"], ["Yerno", "12"], ["Sobrino", "13"], ["Sobrina", "14"],["Otro", "14"]],:class => 'number_field' %>
+Edad	
+	<%= f.text_field :edad_diez, :class => 'number_field' %>
   </div>
 </div>
 

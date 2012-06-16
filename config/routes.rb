@@ -2,13 +2,9 @@ Encuentas::Application.routes.draw do
 
 
   resources :polls
-
   resources :familystructures
-
   resources :generals
-  
   resources :poll_steps
-
   devise_for :admins
 
   devise_for :users

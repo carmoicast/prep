@@ -7,5 +7,4 @@ class PollStepsController < ApplicationController
     @poll = Poll.new
     render_wizard  
   end
-  
 end
