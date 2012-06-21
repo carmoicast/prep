@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.6'
 gem 'thin'
-
+gem 'jquery-rails'
+gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'cancan'
 gem 'sqlite3', group: :development
 gem 'pg', group: :production
 gem 'wicked'
@@ -13,8 +16,3 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
-gem 'devise'
-gem 'twitter-bootstrap-rails'
-gem 'cancan'

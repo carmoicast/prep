@@ -74,7 +74,7 @@
 <h3>Votos para Presidente</h3>
 <br/>
   <div class="control-group">
-    <p class="control-label">P.A.N</p>
+    <p class="control-label">PAN</p>
     <div class="controls">
       <%= f.text_field :pre_pan, :class => 'span1' %>
 	  P.R.I
@@ -351,8 +351,8 @@
 
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+    <%= f.submit "Crear", :class => 'btn btn-primary' %>
+    <%= link_to "Cancelar",
                 boxes_path, :class => 'btn' %>
   </div>
 <% end %>
