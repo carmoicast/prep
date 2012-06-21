@@ -9,13 +9,27 @@
 <%= f.text_field :casilla, :class => 'span1' %>
 	 Sección
 	 <%= f.text_field :seccion, :class => 'span1' %>	
-	 Hora de Apertura
-	<%= f.date_select :hora_apertura, :class => 'date_select' %>
-	Hora de Cierre
-	<%= f.date_select :hora_cierre, :class => 'date_select' %>
     </div>
   </div>
 
+  <div class="control-group">
+    <p class="control-label">Hora de Apertura</p>
+    <div class="controls">
+      <%= f.date_select :hora_apertura, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <p class="control-label">Hora de Cierre</p>
+    <div class="controls">
+      <%= f.date_select :hora_cierre, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :direccion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :direccion, :class => 'text_field' %>
+    </div>
+  </div>
   <div class="control-group">
     <%= f.label :municipio, :class => 'control-label' %>
     <div class="controls">
