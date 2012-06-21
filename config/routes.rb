@@ -1,6 +1,8 @@
 Encuentas::Application.routes.draw do
 
 
+  resources :boxes
+
   resources :polls
   resources :familystructures
   resources :generals

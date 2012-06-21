@@ -1,0 +1,41 @@
+<%- model_class = Box.new.class -%>
+<h1>Casilla </h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:casilla) %></th>
+      <th><%= model_class.human_attribute_name(:seccion) %></th>
+      <th><%= model_class.human_attribute_name(:hora_apertura) %></th>
+      <th><%= model_class.human_attribute_name(:hora_cierre) %></th>
+      <th><%= model_class.human_attribute_name(:direccion) %></th>
+      <th><%= model_class.human_attribute_name(:municipio) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @boxes.each do |box| %>
+      <tr>
+        <td><%= link_to box.id, box_path(box) %></td>
+        <td><%= box.casilla %></td>
+        <td><%= box.seccion %></td>
+        <td><%= box.hora_apertura %></td>
+        <td><%= box.hora_cierre %></td>
+        <td><%= box.direccion %></td>
+        <td><%= box.municipio %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_box_path(box), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      box_path(box),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Nueva Captura", new_box_path,
+            :class => 'btn btn-primary' %>
