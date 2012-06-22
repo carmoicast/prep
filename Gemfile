@@ -9,6 +9,7 @@ gem 'cancan'
 gem 'sqlite3', group: :development
 gem 'pg', group: :production
 gem 'wicked'
+gem 'meta_search'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

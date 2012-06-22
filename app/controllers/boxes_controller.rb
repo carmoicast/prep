@@ -2,8 +2,10 @@ class BoxesController < ApplicationController
   # GET /boxes
   # GET /boxes.json
   def index
-    @boxes = Box.all
+    @search = Box.search(params[:search])
+    @boxes = @search.all
 
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @boxes }

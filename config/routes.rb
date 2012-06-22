@@ -1,6 +1,8 @@
 Encuentas::Application.routes.draw do
 
 
+  resources :bunkers
+
   resources :incidences
 
   resources :boxes

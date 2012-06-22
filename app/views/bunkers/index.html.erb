@@ -1,0 +1,51 @@
+<h1>Listing bunkers</h1>
+
+<table>
+  <tr>
+    <th>Municipio</th>
+    <th>En operacion</th>
+    <th>En ruta</th>
+    <th>Nombre</th>
+    <th>Casilla uno</th>
+    <th>Casilla dos</th>
+    <th>Casilla tres</th>
+    <th>Casilla cuatro</th>
+    <th>Casilla cinco</th>
+    <th>Casilla seis</th>
+    <th>Casilla siete</th>
+    <th>Casilla ocho</th>
+    <th>Casilla nueve</th>
+    <th>Casilla diez</th>
+    <th>Box</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bunkers.each do |bunker| %>
+  <tr>
+    <td><%= bunker.municipio %></td>
+    <td><%= bunker.en_operacion %></td>
+    <td><%= bunker.en_ruta %></td>
+    <td><%= bunker.nombre %></td>
+    <td><%= bunker.casilla_uno %></td>
+    <td><%= bunker.casilla_dos %></td>
+    <td><%= bunker.casilla_tres %></td>
+    <td><%= bunker.casilla_cuatro %></td>
+    <td><%= bunker.casilla_cinco %></td>
+    <td><%= bunker.casilla_seis %></td>
+    <td><%= bunker.casilla_siete %></td>
+    <td><%= bunker.casilla_ocho %></td>
+    <td><%= bunker.casilla_nueve %></td>
+    <td><%= bunker.casilla_diez %></td>
+    <td><%= bunker.box_id %></td>
+    <td><%= link_to 'Show', bunker %></td>
+    <td><%= link_to 'Edit', edit_bunker_path(bunker) %></td>
+    <td><%= link_to 'Destroy', bunker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bunker', new_bunker_path %>

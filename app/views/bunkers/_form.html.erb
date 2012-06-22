@@ -1,0 +1,77 @@
+<%= form_for(@bunker) do |f| %>
+  <% if @bunker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bunker.errors.count, "error") %> prohibited this bunker from being saved:</h2>
+
+      <ul>
+      <% @bunker.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :municipio %><br />
+    <%= f.number_field :municipio %>
+  </div>
+  <div class="field">
+    <%= f.label :en_operacion %><br />
+    <%= f.check_box :en_operacion %>
+  </div>
+  <div class="field">
+    <%= f.label :en_ruta %><br />
+    <%= f.check_box :en_ruta %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :casilla_uno %><br />
+    <%= f.text_field :casilla_uno %>
+  </div>
+  <div class="field">
+    <%= f.label :casilla_dos %><br />
+    <%= f.text_field :casilla_dos %>
+  </div>
+  <div class="field">
+    <%= f.label :casilla_tres %><br />
+    <%= f.text_field :casilla_tres %>
+  </div>
+  <div class="field">
+    <%= f.label :casilla_cuatro %><br />
+    <%= f.text_field :casilla_cuatro %>
+  </div>
+  <div class="field">
+    <%= f.label :casilla_cinco %><br />
+    <%= f.text_field :casilla_cinco %>
+  </div>
+  <div class="field">
+    <%= f.label :casilla_seis %><br />
+    <%= f.text_field :casilla_seis %>
+  </div>
+  <div class="field">
+    <%= f.label :casilla_siete %><br />
+    <%= f.text_field :casilla_siete %>
+  </div>
+  <div class="field">
+    <%= f.label :casilla_ocho %><br />
+    <%= f.text_field :casilla_ocho %>
+  </div>
+  <div class="field">
+    <%= f.label :casilla_nueve %><br />
+    <%= f.text_field :casilla_nueve %>
+  </div>
+  <div class="field">
+    <%= f.label :casilla_diez %><br />
+    <%= f.text_field :casilla_diez %>
+  </div>
+  <div class="field">
+    <%= f.label :box_id %><br />
+    <%= f.number_field :box_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

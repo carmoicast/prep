@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  municipio: 1
+  en_operacion: false
+  en_ruta: false
+  nombre: MyString
+  casilla_uno: MyString
+  casilla_dos: MyString
+  casilla_tres: MyString
+  casilla_cuatro: MyString
+  casilla_cinco: MyString
+  casilla_seis: MyString
+  casilla_siete: MyString
+  casilla_ocho: MyString
+  casilla_nueve: MyString
+  casilla_diez: MyString
+  box_id: 1
+
+two:
+  municipio: 1
+  en_operacion: false
+  en_ruta: false
+  nombre: MyString
+  casilla_uno: MyString
+  casilla_dos: MyString
+  casilla_tres: MyString
+  casilla_cuatro: MyString
+  casilla_cinco: MyString
+  casilla_seis: MyString
+  casilla_siete: MyString
+  casilla_ocho: MyString
+  casilla_nueve: MyString
+  casilla_diez: MyString
+  box_id: 1

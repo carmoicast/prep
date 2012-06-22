@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120622003313) do
+ActiveRecord::Schema.define(:version => 20120622161134) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -90,6 +90,28 @@ ActiveRecord::Schema.define(:version => 20120622003313) do
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
   end
+
+  create_table "bunkers", :force => true do |t|
+    t.integer  "municipio"
+    t.boolean  "en_operacion"
+    t.boolean  "en_ruta"
+    t.string   "nombre"
+    t.string   "casilla_uno"
+    t.string   "casilla_dos"
+    t.string   "casilla_tres"
+    t.string   "casilla_cuatro"
+    t.string   "casilla_cinco"
+    t.string   "casilla_seis"
+    t.string   "casilla_siete"
+    t.string   "casilla_ocho"
+    t.string   "casilla_nueve"
+    t.string   "casilla_diez"
+    t.integer  "box_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "bunkers", ["box_id"], :name => "index_bunkers_on_box_id"
 
   create_table "familystructures", :force => true do |t|
     t.string   "paterno"
