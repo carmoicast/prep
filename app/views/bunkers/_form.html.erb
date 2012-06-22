@@ -1,77 +1,94 @@
-<%= form_for(@bunker) do |f| %>
-  <% if @bunker.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@bunker.errors.count, "error") %> prohibited this bunker from being saved:</h2>
+<%= form_for @bunker, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :municipio, :class => 'control-label' %>
+    <div class="controls">
 
-      <ul>
-      <% @bunker.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= f.select :municipio, [["Abasolo", "Abasolo"], ["Acámbaro", "Acámbaro"], ["Apaseo el Alto", "Apaseo el Alto"], ["Apaseo el Grande", "Apaseo el Grande"], ["Atarjea", "Atarjea"], ["Celaya", "Celaya"], ["Comonfort", "Comonfort"], ["Coroneo", "Coroneo"], ["Cortázar", "Cortázar"], ["Cuerámaro", "Cuerámaro"], ["Doctor Mora", "Doctor Mora"], ["Dolores Hidalgo	", "Dolores Hidalgo"], ["Guanajuato", "Guanajuato"], ["Huanímaro", "Huanímaro"], ["Irapuato", "Irapuato"], ["Jaral del Progreso", "Jaral del Progreso"], ["Jerécuaro", "Jerécuaro"], ["León", "León"], ["Manuel Doblado", "Manuel Doblado"], ["Moroleón", "Moroleón"], ["Ocampo", "Ocampo"], ["Pénjamo", "Pénjamo"], ["Pueblo Nuevo", "Pueblo Nuevo"], ["Purísima del Rincón", "Purísima del Rincón"], ["Romita", "Romita"], ["Salamanca", "Salamanca"], ["Salvatierra", "Salvatierra"], ["San Diego de la Unión", "San Diego de la Unión"], ["San Felipe", "San Felipe"], ["San Francisco del Rincón", "San Francisco del Rincón"], ["San José Iturbide", "San José Iturbide"], ["San Luis de la Paz", "San Luis de la Paz"], ["San Miguel de Allende", "San Miguel de Allende"], ["Santa Catarina", "Santa Catarina"], ["Santa Cruz de Juventino Rosas", "Santa Cruz de Juventino Rosas"], ["Santiago Maravatío", "Santiago Maravatío"], ["Silao", "Silao"], ["Tarandacuao", "Tarandacuao"], ["Tarimoro", "Tarimoro"], ["Tierra Blanca", "Tierra Blanca"], ["Uriangato", "Uriangato"], ["Valle de Santiago", "Valle de Santiago"], ["Victoria", "Victoria"], ["Villagrán", "Villagrán"], ["Xichú", "Xichú"], ["Yuriria", "Yuriria"] ], :class => "number_field" %>
+
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :en_operacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :en_operacion, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :en_ruta, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :en_ruta, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :nombre, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nombre, :class => 'span3' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :casilla_uno, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :casilla_uno, :class => 'span1' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :casilla_dos, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :casilla_dos, :class => 'span1' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :casilla_tres, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :casilla_tres, :class => 'span1' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :casilla_cuatro, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :casilla_cuatro, :class => 'span1' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :casilla_cinco, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :casilla_cinco, :class => 'span1' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :casilla_seis, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :casilla_seis, :class => 'span1' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :casilla_siete, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :casilla_siete, :class => 'span1' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :casilla_ocho, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :casilla_ocho, :class => 'span1' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :casilla_nueve, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :casilla_nueve, :class => 'span1' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :casilla_diez, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :casilla_diez, :class => 'span1' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :municipio %><br />
-    <%= f.number_field :municipio %>
-  </div>
-  <div class="field">
-    <%= f.label :en_operacion %><br />
-    <%= f.check_box :en_operacion %>
-  </div>
-  <div class="field">
-    <%= f.label :en_ruta %><br />
-    <%= f.check_box :en_ruta %>
-  </div>
-  <div class="field">
-    <%= f.label :nombre %><br />
-    <%= f.text_field :nombre %>
-  </div>
-  <div class="field">
-    <%= f.label :casilla_uno %><br />
-    <%= f.text_field :casilla_uno %>
-  </div>
-  <div class="field">
-    <%= f.label :casilla_dos %><br />
-    <%= f.text_field :casilla_dos %>
-  </div>
-  <div class="field">
-    <%= f.label :casilla_tres %><br />
-    <%= f.text_field :casilla_tres %>
-  </div>
-  <div class="field">
-    <%= f.label :casilla_cuatro %><br />
-    <%= f.text_field :casilla_cuatro %>
-  </div>
-  <div class="field">
-    <%= f.label :casilla_cinco %><br />
-    <%= f.text_field :casilla_cinco %>
-  </div>
-  <div class="field">
-    <%= f.label :casilla_seis %><br />
-    <%= f.text_field :casilla_seis %>
-  </div>
-  <div class="field">
-    <%= f.label :casilla_siete %><br />
-    <%= f.text_field :casilla_siete %>
-  </div>
-  <div class="field">
-    <%= f.label :casilla_ocho %><br />
-    <%= f.text_field :casilla_ocho %>
-  </div>
-  <div class="field">
-    <%= f.label :casilla_nueve %><br />
-    <%= f.text_field :casilla_nueve %>
-  </div>
-  <div class="field">
-    <%= f.label :casilla_diez %><br />
-    <%= f.text_field :casilla_diez %>
-  </div>
-  <div class="field">
-    <%= f.label :box_id %><br />
-    <%= f.number_field :box_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit "Crear Bunker", :class => 'btn btn-primary' %>
+    <%= link_to "Cancelar",
+                bunkers_path, :class => 'btn' %>
   </div>
 <% end %>

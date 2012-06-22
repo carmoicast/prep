@@ -1,51 +1,62 @@
-<h1>Listing bunkers</h1>
-
-<table>
-  <tr>
-    <th>Municipio</th>
-    <th>En operacion</th>
-    <th>En ruta</th>
-    <th>Nombre</th>
-    <th>Casilla uno</th>
-    <th>Casilla dos</th>
-    <th>Casilla tres</th>
-    <th>Casilla cuatro</th>
-    <th>Casilla cinco</th>
-    <th>Casilla seis</th>
-    <th>Casilla siete</th>
-    <th>Casilla ocho</th>
-    <th>Casilla nueve</th>
-    <th>Casilla diez</th>
-    <th>Box</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @bunkers.each do |bunker| %>
-  <tr>
-    <td><%= bunker.municipio %></td>
-    <td><%= bunker.en_operacion %></td>
-    <td><%= bunker.en_ruta %></td>
-    <td><%= bunker.nombre %></td>
-    <td><%= bunker.casilla_uno %></td>
-    <td><%= bunker.casilla_dos %></td>
-    <td><%= bunker.casilla_tres %></td>
-    <td><%= bunker.casilla_cuatro %></td>
-    <td><%= bunker.casilla_cinco %></td>
-    <td><%= bunker.casilla_seis %></td>
-    <td><%= bunker.casilla_siete %></td>
-    <td><%= bunker.casilla_ocho %></td>
-    <td><%= bunker.casilla_nueve %></td>
-    <td><%= bunker.casilla_diez %></td>
-    <td><%= bunker.box_id %></td>
-    <td><%= link_to 'Show', bunker %></td>
-    <td><%= link_to 'Edit', edit_bunker_path(bunker) %></td>
-    <td><%= link_to 'Destroy', bunker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+<%- model_class = Bunker.new.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:municipio) %></th>
+      <th><%= model_class.human_attribute_name(:en_operacion) %></th>
+      <th><%= model_class.human_attribute_name(:en_ruta) %></th>
+      <th><%= model_class.human_attribute_name(:nombre) %></th>
+      <th><%= model_class.human_attribute_name(:casilla_uno) %></th>
+      <th><%= model_class.human_attribute_name(:casilla_dos) %></th>
+      <th><%= model_class.human_attribute_name(:casilla_tres) %></th>
+      <th><%= model_class.human_attribute_name(:casilla_cuatro) %></th>
+      <th><%= model_class.human_attribute_name(:casilla_cinco) %></th>
+      <th><%= model_class.human_attribute_name(:casilla_seis) %></th>
+      <th><%= model_class.human_attribute_name(:casilla_siete) %></th>
+      <th><%= model_class.human_attribute_name(:casilla_ocho) %></th>
+      <th><%= model_class.human_attribute_name(:casilla_nueve) %></th>
+      <th><%= model_class.human_attribute_name(:casilla_diez) %></th>
+      <th>Creado a las</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bunkers.each do |bunker| %>
+      <tr>
+        <td><%= link_to bunker.id, edit_bunker_path(bunker) %></td>
+        <td><%= bunker.municipio %></td>
+        <td><%= bunker.en_operacion %></td>
+        <td><%= bunker.en_ruta %></td>
+        <td><%= bunker.nombre %></td>
+        <td><%= bunker.casilla_uno %></td>
+        <td><%= bunker.casilla_dos %></td>
+        <td><%= bunker.casilla_tres %></td>
+        <td><%= bunker.casilla_cuatro %></td>
+        <td><%= bunker.casilla_cinco %></td>
+        <td><%= bunker.casilla_seis %></td>
+        <td><%= bunker.casilla_siete %></td>
+        <td><%= bunker.casilla_ocho %></td>
+        <td><%= bunker.casilla_nueve %></td>
+        <td><%= bunker.casilla_diez %></td>
+        <td><%=l bunker.created_at %></td>
+        <td>
+          <%= link_to "Editar",
+                      edit_bunker_path(bunker), :class => 'btn btn-mini' %>
+          <%= link_to "Eliminar",
+                      bunker_path(bunker),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Estas seguro?')),
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<br />
-
-<%= link_to 'New Bunker', new_bunker_path %>
+<%= link_to "Nuevo",
+            new_bunker_path,
+            :class => 'btn btn-primary' %>
