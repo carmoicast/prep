@@ -1,0 +1,174 @@
+<%= form_for @incidence, :html => { :class => 'form-horizontal' } do |f| %>
+
+<div class="control-group">
+
+<div class="controls">
+<div class="well">
+  <div class="control-group">
+    <h3>No. Casilla </h3>
+    <div class="controls">
+      <%= text_field :box_id, :class => 'number_field' %>
+    </div>
+  </div>
+</div>
+	
+<div class = "well">
+<h3>Apertura</h3>
+<br/>
+
+<%= f.label(:incidencia, "No ha abierto la casilla.") %>
+<%= f.radio_button(:incidencia, "No ha abierto la casilla.") %>
+
+
+<%= f.label(:incidencia, "La casilla se abrió antes de las 8 de la mañana.") %>
+<%= f.radio_button(:incidencia, "La casilla se abrió antes de las 8 de la mañana.") %>
+
+<%= f.label(:incidencia, "Instalaron la casilla personas no autorizadas por la ley.") %>
+<%= f.radio_button(:incidencia, "Instalaron la casilla personas no autorizadas por la ley.") %>
+
+<%= f.label(:incidencia, "Se instaló la casilla en lugar distinto sin justificación.") %>
+<%= f.radio_button(:incidencia, "Se instaló la casilla en lugar distinto sin justificación.") %>
+
+<%= f.label(:incidencia, "Se designó a un representante de Partido como funcionario.") %>
+<%= f.radio_button(:incidencia, "Se designó a un representante de Partido como funcionario.") %>
+
+<%= f.label(:incidencia, "Se designó a un representante de Partido como funcionario.") %>
+<%= f.radio_button(:incidencia, "No se levantó acta de apertura o se hizo en forma irregular.") %>
+
+
+<%= f.label(:incidencia, "No armaron urnas a la vista de representantes, ni permitieron ver que estaban vacías.") %>
+<%= f.radio_button(:incidencia, "No armaron urnas a la vista de representantes, ni permitieron ver que estaban vacías.") %>
+
+<%= f.label(:incidencia, "La urnas tenían votos o algunos papeles antes de empezar la votación.") %>
+<%= f.radio_button(:incidencia, "La urnas tenían votos o algunos papeles antes de empezar la votación.") %>
+
+<%= f.label(:incidencia, "No se dio acceso a los representantes del PAN a la casilla.") %>
+<%= f.radio_button(:incidencia, "No se dio acceso a los representantes del PAN a la casilla.") %>
+
+<%= f.label(:incidencia, "No se permitió a los representantes de Partidos lugar dónde observar bien el proceso.") %>
+<%= f.radio_button(:incidencia, "No se permitió a los representantes de Partidos lugar dónde observar bien el proceso.") %>
+
+<%= f.label(:incidencia, "No se contaron las boletas antes de iniciar la votación.") %>
+<%= f.radio_button(:incidencia, "No se contaron las boletas antes de iniciar la votación.") %>
+
+<%= f.label(:incidencia, "No se aceptó el sorteo para firmar las boletas por los representantes de Partido.") %>
+<%= f.radio_button(:incidencia, "No se aceptó el sorteo para firmar las boletas por los representantes de Partido.") %>
+
+<%= f.label(:incidencia, "La casilla no tiene representantes.") %>
+<%= f.radio_button(:incidencia, "La casilla no tiene representantes.") %>
+
+<%= f.label(:incidencia, "La casilla no tiene urnas.") %>
+<%= f.radio_button(:incidencia, "La casilla no tiene urnas.") %>
+
+<%= f.label(:incidencia, "La casilla no tiene tinta indeleble.") %>
+<%= f.radio_button(:incidencia, "La casilla no tiene tinta indeleble.") %>
+
+<%= f.label(:incidencia, "No tenemos representantes del PAN.") %>
+<%= f.radio_button(:incidencia, "No tenemos representantes del PAN.") %>
+
+<%= f.label(:incidencia, "La casilla no tiene mamparas para el voto secreto.") %>
+<%= f.radio_button(:incidencia, "La casilla no tiene mamparas para el voto secreto.") %>
+</div>
+
+<div class="well">
+<h3>Proceso</h3>
+
+<%= f.label(:incidencia, "Se permite votar sin credencial con fotografía o simplemente presentando otra identificación.") %>	
+<%= f.radio_button(:incidencia, "Se permite votar sin credencial con fotografía o simplemente presentando otra identificación.") %>
+
+<%= f.label(:incidencia, "Están votando gentes sin estar ven la Lista Nominal.") %>
+<%= f.radio_button(:incidencia, "Están votando gentes sin estar ven la Lista Nominal.") %>
+
+<%= f.label(:incidencia, "No ponen tinta indeleble en el pulgar de los votantes.") %>
+<%= f.radio_button(:incidencia, "No ponen tinta indeleble en el pulgar de los votantes.") %>
+
+<%= f.label(:incidencia, "Falta tinta indeleble en la casilla.") %>
+<%= f.radio_button(:incidencia, "Falta tinta indeleble en la casilla.") %>
+
+<%= f.label(:incidencia, "No se permite votar en secreto.") %>
+<%= f.radio_button(:incidencia, "No se permite votar en secreto.") %>
+
+<%= f.label(:incidencia, "Hubo violencia física o presión a los representantes, funcionarios o electores.") %>
+<%= f.radio_button(:incidencia, "Hubo violencia física o presión a los representantes, funcionarios o electores.") %>
+
+<%= f.label(:incidencia, "Se ha expulsado sin causa justificada al representante del PAN.") %>
+<%= f.radio_button(:incidencia, "Se ha expulsado sin causa justificada al representante del PAN.") %>
+
+<%= f.label(:incidencia, "Las urnas no están a la vista de los representantes de los Partidos.") %>
+<%= f.radio_button(:incidencia, "Las urnas no están a la vista de los representantes de los Partidos.") %>
+
+<%= f.label(:incidencia, "Se ha suspendido la votación sin causa justificada.") %>
+<%= f.radio_button(:incidencia, "Se ha suspendido la votación sin causa justificada.") %>
+
+<%= f.label(:incidencia, "Se retiraron sin justificación los funcionarios, sustituyéndolos por otros.") %>
+<%= f.radio_button(:incidencia, "Se retiraron sin justificación los funcionarios, sustituyéndolos por otros.") %>
+
+<%= f.label(:incidencia, "Los observadores no se están limitando a sus funciones.") %>
+<%= f.radio_button(:incidencia, "Los observadores no se están limitando a sus funciones.") %>
+</div>
+
+<div class="well">
+<h3>Cierre</h3>
+<%= f.label(:incidencia, "Cerraron la casilla antes de las 6 de la tarde.") %>
+<%= f.radio_button(:incidencia, "Cerraron la casilla antes de las 6 de la tarde.") %>
+
+<%= f.label(:incidencia, "Cerraron la casilla antes de las 6 de la tarde habiendo gente formada para votar.") %>
+<%= f.radio_button(:incidencia, "Cerraron la casilla antes de las 6 de la tarde habiendo gente formada para votar.") %>
+
+<%= f.label(:incidencia, "Hubo mala intención o error grave en el conteo de votos y llenado de las actas de escrutinio.") %>
+<%= f.radio_button(:incidencia, "Hubo mala intención o error grave en el conteo de votos y llenado de las actas de escrutinio.") %>
+
+<%= f.label(:incidencia, "El escrutinio y cómputo se hizo en lugar distinto sin causa justificada.") %>
+<%= f.radio_button(:incidencia, "El escrutinio y cómputo se hizo en lugar distinto sin causa justificada.") %>
+
+<%= f.label(:incidencia, "Los observadores no se están limitando a sus funciones.") %>
+<%= f.radio_button(:incidencia, "No ha abierto la casilla.") %>
+
+<%= f.label(:incidencia, "El escrutinio y cómputo se hizo por personas no autorizada por la ley.") %>
+<%= f.radio_button(:incidencia, "El escrutinio y cómputo se hizo por personas no autorizada por la ley.") %>
+
+<%= f.label(:incidencia, "El secretario no contó las boletas sobrantes.") %>
+<%= f.radio_button(:incidencia, "El secretario no contó las boletas sobrantes.") %>
+
+<%= f.label(:incidencia, "El presidente de casilla negó entregar copias legibles de las actas a los representantes.") %>
+<%= f.radio_button(:incidencia, "El presidente de casilla negó entregar copias legibles de las actas a los representantes.") %>
+
+<%= f.label(:incidencia, "El presidente de casilla no aceptó que representantes lo acompañaran a llevar el paquete.") %>
+<%= f.radio_button(:incidencia, "El presidente de casilla no aceptó que representantes lo acompañaran a llevar el paquete.") %>
+
+<%= f.label(:incidencia, "Otro tipo de incidente.") %>
+<%= f.radio_button(:incidencia, "Otro tipo de incidente.") %>
+
+</div>
+<div class="well">
+	<h3>Externo</h3>
+<%= f.label(:incidencia, "Acarreo de Votantes.") %>
+<%= f.radio_button(:incidencia, "Acarreo de Votantes.") %>
+
+<%= f.label(:incidencia, "Ubicación de Casas Amigas (PAOs)") %>
+<%= f.radio_button(:incidencia, "Ubicación de Casas Amigas (PAOs)") %>
+
+<%= f.label(:incidencia, "Robo de urnas.") %>
+<%= f.radio_button(:incidencia, "Robo de urnas.") %>
+
+<%= f.label(:incidencia, "Compra de votos en efectivo o en especie. ") %>
+<%= f.radio_button(:incidencia, "Compra de votos en efectivo o en especie. ") %>
+
+</div>
+
+  </div>
+</div>
+
+  <div class="control-group">
+    <%= f.label :hora, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.datetime_select :hora, :class => 'datetime_select' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Crear Incidencia", :class => 'btn btn-primary' %>
+    <%= link_to "Cancelar",
+                incidences_path, :class => 'btn' %>
+  </div>
+<% end %>

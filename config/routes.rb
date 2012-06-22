@@ -1,6 +1,8 @@
 Encuentas::Application.routes.draw do
 
 
+  resources :incidences
+
   resources :boxes
 
   resources :polls

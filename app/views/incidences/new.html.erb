@@ -1,0 +1,6 @@
+<%- model_class = @incidence.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human,
+                                 :default => "Nueva Incidencia") %></h1>
+</div>
+<%= render :partial => 'form' %>

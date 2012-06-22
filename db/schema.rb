@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120621002815) do
+ActiveRecord::Schema.define(:version => 20120622003313) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -32,10 +32,10 @@ ActiveRecord::Schema.define(:version => 20120621002815) do
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
   create_table "boxes", :force => true do |t|
-    t.integer  "casilla"
+    t.string   "casilla"
     t.string   "seccion"
-    t.date     "hora_apertura"
-    t.date     "hora_cierre"
+    t.datetime "hora_apertura"
+    t.datetime "hora_cierre"
     t.string   "direccion"
     t.string   "municipio"
     t.integer  "id_incidente"
@@ -119,6 +119,20 @@ ActiveRecord::Schema.define(:version => 20120621002815) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
+
+  create_table "incidences", :force => true do |t|
+    t.datetime "hora"
+    t.integer  "tipo_incidente_apertura"
+    t.integer  "tipo_incidente_proceso"
+    t.integer  "tipo_incidente_cierre"
+    t.string   "tipo_incidente_otro"
+    t.integer  "box_id"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "incidencia"
+  end
+
+  add_index "incidences", ["box_id"], :name => "index_incidences_on_box_id"
 
   create_table "polls", :force => true do |t|
     t.string   "paterno"
