@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120622171239) do
+ActiveRecord::Schema.define(:version => 20120624075822) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(:version => 20120622171239) do
     t.integer  "diputado_federal_total"
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
+    t.string   "distrito"
   end
 
   create_table "bunkers", :force => true do |t|
@@ -109,6 +110,7 @@ ActiveRecord::Schema.define(:version => 20120622171239) do
     t.integer  "box_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.string   "telefono"
   end
 
   add_index "bunkers", ["box_id"], :name => "index_bunkers_on_box_id"
