@@ -1,7 +1,10 @@
 <div class="hero-unit">
 	<h1>P.R.E.P. Guanajuato</h1>
 	<p>Bienvenido al sistema de Captura de Resultados :: Elecciones 2012</p>
-	<p><%= link_to "Empezar a capturar", boxes_path, :class => "btn btn-primary btn-large" %></p>
+  <% if current_user.role == "capturista" %>
+	  <p><%#= link_to "Empezar a capturar", edit_box_path(current_user.box), :class => "btn btn-primary btn-large" %></p>
+	  <p><%= link_to "Empezar a capturar",boxes_path , :class => "btn btn-primary btn-large" %></p>
+  <% end %>
 </div>
 
 <!-- <div class="span4">
