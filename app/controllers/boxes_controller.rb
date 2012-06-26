@@ -2,10 +2,14 @@ class BoxesController < ApplicationController
   # GET /boxes
   # GET /boxes.json
   def index
-    @search = Box.search(params[:search])
-    @boxes = @search.all
+    if current_user.role == "admin"
+      @search = Box.search(params[:search])
+      @boxes = @search.all
+    else
+      @search = current_user.boxes.search(params[:search])
+      @boxes = @search.all
+    end
 
-    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @boxes }
