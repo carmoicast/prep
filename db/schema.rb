@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120629175746) do
+ActiveRecord::Schema.define(:version => 20120630223310) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -157,6 +157,7 @@ ActiveRecord::Schema.define(:version => 20120629175746) do
     t.string   "incidencia"
     t.integer  "user_id"
     t.string   "casilla"
+    t.integer  "status"
   end
 
   add_index "incidences", ["box_id"], :name => "index_incidences_on_box_id"
