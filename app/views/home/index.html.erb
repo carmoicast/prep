@@ -3,9 +3,23 @@
 	<p>Bienvenido al sistema de Captura de Resultados :: Elecciones 2012</p>
   <% if current_user.role == "capturista" || current_user.role == "abogado" %>
 	  <p><%#= link_to "Empezar a capturar", edit_box_path(current_user.box), :class => "btn btn-primary btn-large" %></p>
-	  <p><%= link_to "Empezar a capturar",incidences_path, :class => "btn btn-primary btn-large" %></p>
+	  <p><%= link_to "Empezar a capturar",boxes_path, :class => "btn btn-primary btn-large" %></p>
   <% end %>
 </div>
 
+
+<div class="span4">
+	<h3>Incidencias</h3>
+	<p>Captura de incidencias</p>
+	<p><%= link_to "Incidencias", incidences_path, :class => "btn" %></p>
+</div>
+
+<% if current_user.role == "admin" %>
+<div class="span4">
+	<h3>Bunkers</h3>
+	<p>Captura de bunkers</p>
+	<p><%= link_to "Bunkers", bunkers_path, :class => "btn" %></p>
+</div>
+<% end %>
 
 
