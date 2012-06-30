@@ -5,23 +5,22 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th>Casilla</th>
       <th><%= model_class.human_attribute_name(:hora) %></th>
       <th><%= model_class.human_attribute_name(:incidencia) %>
 	  <th>Status</th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th>Acciones</th>
     </tr>
   </thead>
   <tbody>
     <% @incidences.each do |incidence| %>
       <tr>
-        <td><%= link_to incidence.id, incidence_path(incidence) %></td>
+        <td><%= link_to incidence.casilla, edit_incidence_path(incidence) %></td>
         <td><%= incidence.hora %></td>
         <td><%= incidence.incidencia %></td>
         <td></td>
-
-        <td><%=l incidence.created_at %></td>
+        <td><%= incidence.created_at %></td>
         <td>
 <% if current_user.role == "admin" %>
           <%= link_to "Editar", edit_incidence_path(incidence), :class => 'btn btn-mini' %>
