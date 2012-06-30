@@ -1,4 +1,6 @@
 class BoxesController < ApplicationController
+  before_filter :authenticate_user!,  :user_signed_in?
+
   # GET /boxes
   # GET /boxes.json
   def index

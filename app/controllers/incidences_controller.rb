@@ -1,8 +1,17 @@
 class IncidencesController < ApplicationController
+  before_filter :authenticate_user!
+  
   # GET /incidences
   # GET /incidences.json
   def index
-    @incidences = Incidence.all
+
+    
+    if current_user.role == "admin"
+      @incidences = Incidence.all
+    else
+      @incidences = current_user.incidences
+    end
+    
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,10 +50,11 @@ class IncidencesController < ApplicationController
   # POST /incidences.json
   def create
     @incidence = Incidence.new(params[:incidence])
-
+    @incidence.user_id = current_user.id
+    
     respond_to do |format|
       if @incidence.save
-        format.html { redirect_to boxes_path, notice: 'Incidencia creada correctamente' }
+        format.html { redirect_to incidences_path, notice: 'Incidencia creada correctamente' }
         
         format.json { render json: @incidence, status: :created, location: @incidence }
       else

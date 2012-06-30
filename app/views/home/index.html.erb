@@ -1,15 +1,11 @@
 <div class="hero-unit">
 	<h1>P.R.E.P. Guanajuato</h1>
 	<p>Bienvenido al sistema de Captura de Resultados :: Elecciones 2012</p>
-  <% if current_user.role == "capturista" %>
+  <% if current_user.role == "capturista" || current_user.role == "abogado" %>
 	  <p><%#= link_to "Empezar a capturar", edit_box_path(current_user.box), :class => "btn btn-primary btn-large" %></p>
-	  <p><%= link_to "Empezar a capturar",boxes_path , :class => "btn btn-primary btn-large" %></p>
+	  <p><%= link_to "Empezar a capturar",incidences_path, :class => "btn btn-primary btn-large" %></p>
   <% end %>
 </div>
 
-<!-- <div class="span4">
-	<h2>No. de encuestas #6</h2>
-	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eiu</p>
-</div>-->
 
 

@@ -3,18 +3,46 @@
 <div class="control-group">
 
 <div class="controls">
+	<div class="well">
+	  <div class="control-group">
+			<!-- -->
+			<% if current_user.role == "admin" %>
+			    <h3>Turnar incidencia a:</h3>
+			    <div class="controls">
+			        <%= f.collection_select :user_id, User.all, :id, :email %>
+			    </div>
+			<% end %>
+			<!-- -->
+		</div>	
+	 </div>
+</div>
+	
+	
+	
+<div class="controls">
 <div class="well">
   <div class="control-group">
     <h3>No. Casilla </h3>
     <div class="controls">
-      <%= text_field :box_id, :class => 'number_field' %>
+      	<%= f.text_field :casilla, :class => 'span1' %>
     </div>
   </div>
 </div>
+
 	
 <div class = "well">
 <h3>Apertura</h3>
 <br/>
+
+<% if current_user.role == "admin" %>
+  <div class="control-group">
+    <p class="control-label">Usuario</p>
+    <div class="controls">
+        <%= f.collection_select :user_id, User.all, :id, :email %>
+    </div>
+  </div>
+<% end %>
+
 
 <%= f.label(:incidencia, "No ha abierto la casilla.") %>
 <%= f.radio_button(:incidencia, "No ha abierto la casilla.") %>
@@ -153,6 +181,8 @@
 
 <%= f.label(:incidencia, "Compra de votos en efectivo o en especie. ") %>
 <%= f.radio_button(:incidencia, "Compra de votos en efectivo o en especie. ") %>
+
+
 
 </div>
 
