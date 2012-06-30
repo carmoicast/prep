@@ -19,9 +19,27 @@
         <td><%= link_to incidence.casilla, edit_incidence_path(incidence) %></td>
         <td><%= incidence.hora %></td>
         <td><%= incidence.incidencia %></td>
-        <td></td>
+		<td>
+		<% if incidence.status == "Capturado" %>
+		    <span class="label"><%= incidence.status %></span>
+		<% end %>	
+		<% if incidence.status == "En Proceso" %>
+		    <span class="label label-info"><%= incidence.status %></span>
+		<% end %>
+		<% if incidence.status == "Urgente" %>
+		    <span class="label label-important"><%= incidence.status %></span>
+		<% end %>
+		<% if incidence.status == "Solucionado" %>
+		    <span class="label label-success"><%= incidence.status %></span>
+		<% end %>
+		
+		
+		</td>
+			
         <td><%= incidence.created_at %></td>
         <td>
+
+
 <% if current_user.role == "admin" %>
           <%= link_to "Editar", edit_incidence_path(incidence), :class => 'btn btn-mini' %>
           <%= link_to "Eliminar",
