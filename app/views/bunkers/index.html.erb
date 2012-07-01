@@ -29,8 +29,16 @@
       <tr>
         <td><%= link_to bunker.id, edit_bunker_path(bunker) %></td>
         <td><%= bunker.municipio %></td>
-        <td><%= bunker.en_operacion %></td>
-        <td><%= bunker.en_ruta %></td>
+		<% if bunker.en_operacion == true %>
+        	<td>Está en Operación</td>	
+			<% else %>
+			 	<td>No ha iniciado</td>
+		<% end  %>		
+		<% if bunker.en_ruta == true %>
+        	<td>Esta en la casilla</td>	
+			<% else %>
+			 	<td>No ha llegado</td>
+		<% end  %>
         <td><%= bunker.nombre %></td>
         <td><%= bunker.casilla_uno %></td>
         <td><%= bunker.casilla_dos %></td>
@@ -57,6 +65,4 @@
   </tbody>
 </table>
 
-<%= link_to "Nuevo",
-            new_bunker_path,
-            :class => 'btn btn-primary' %>
+<%= link_to "Nuevo", new_bunker_path, :class => 'btn btn-primary' %>

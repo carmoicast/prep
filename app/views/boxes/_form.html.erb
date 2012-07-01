@@ -1,4 +1,4 @@
-<%= form_for @box, :html => { :class => 'table table-bordered table-striped' } do |f| %>
+<%= form_for @box, :html => { :class => 'table' } do |f| %>
 <!-- Grupo uno -->
 <div class="well">
 	<br/>
@@ -47,323 +47,106 @@
 </div>
 <!-- Termina Grupo uno -->
 
-<div class="well">
-<!-- Grupo Dos -->
-<div class="control-group">
-	<div class="controls">
-		<%= link_to "Agregar Incidencias", new_incidence_path, :class => "btn btn-success btn-mini" %>
-	</div>
-</div>
-
-<!-- 
-<div class="control-group">
-    <p class="control-label">Incidente</p>
-    <div class="controls">
-      <%= f.text_field :id_incidente, :class => 'span1' %>
-    </div>
-  </div> -->   
-  <div class="control-group">
-    <p class="control-label">Representante de Casilla Uno</p>
-    <div class="controls">
-      <%= f.text_field :rc_uno, :class => 'span3' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">Representante de Casilla Dos</p>
-    <div class="controls">
-      <%= f.text_field :rc_dos, :class => 'span3' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">Representante de Casilla Tres</p>
-    <div class="controls">
-      <%= f.text_field :rc_tres, :class => 'span3' %>
-    </div>
-  </div>
-<!-- Termina Grupo Dos -->
-</div>
 <!-- Acta para Presidente -->
+<table>
+  <thead>
+    <tr>
+      <th>Votos para</th>
+      <th>PAN</th>
+      <th>PRI</th>
+      <th>PRD</th>
+      <th>PARTIDO VERDE</th>
+      <th>PT</th>
+      <th>Movimiento Ciudadano</th>
+      <th>Nueva Alianza</th>
+      <th>Coalición Uno</th>
+      <th>Coalición Dos</th>
+      <th>Coalición Tres</th>
+      <th>Coalición Cuatro</th>
+      <th>Coalición Cinco</th>
+      <th>Coalición No Registrados</th>
+      <th>Votos Nulos</th>
+      <th>Total Presidente</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+	  <td>Para presidente</td>	
+      <td><%= f.text_field :pre_pan, :class => 'span1' %></td>
+      <td><%= f.text_field :pre_pri, :class => 'span1' %></td>
+      <td><%= f.text_field :pre_prd, :class => 'span1' %></td>
+      <td><%= f.text_field :pre_verde, :class => 'span1' %></td>
+      <td><%= f.text_field :pre_pt, :class => 'span1' %></td>
+      <td><%= f.text_field :pre_movimiento, :class => 'span1' %></td>
+      <td> <%= f.text_field :pre_nueva_alinza, :class => 'span1' %></td>
+      <td><%= f.text_field :pre_coalicion_uno, :class => 'span1' %></td>
+      <td><%= f.text_field :pre_coalicion_dos, :class => 'span1' %></td>
+      <td><%= f.text_field :pre_coalicion_tres, :class => 'span1' %></td>
+      <td><%= f.text_field :pre_coalicion_cuatro, :class => 'span1' %></td>
+      <td><%= f.text_field :pre_coalicion_cinco, :class => 'span1' %></td>
+	<td><%= f.text_field :pre_candidatos_no_registrado, :class => 'span1' %></td>
+   <td><%= f.text_field :pre_votos_nulos, :class => 'span1' %></td>
+   <td><%= f.text_field :pre_total, :class => 'span1' %></td>
+    </tr>
+  </tbody>
+<tbody>
+    <tr>
+	  <td>Para Diputado Federal</td>	
+      <td><%= f.text_field :diputado_federal_pan, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_federal_pri, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_federal_prd, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_federal_verde, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_federal_pt, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_federal_movimiento, :class => 'span1' %></td>
+      <td> <%= f.text_field :diputado_federal_nueva_alianza, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_federal_coalicion_uno, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_federal_coalicion_tres, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_federal_coalicion_tres, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_federal_coalicion_cuatro, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_federal_coalicion_cinco, :class => 'span1' %></td>
+	<td><%= f.text_field :diputado_federal_no_registrado, :class => 'span1' %></td>
+   <td><%= f.text_field :diputado_federal_votos_nulos, :class => 'span1' %></td>
+   <td><%= f.text_field :diputado_federal_total, :class => 'span1' %></td>
+    </tr>
+  </tbody>
 
-<div class="well">
-	<br/>
-<h3>Votos para Presidente</h3>
-<br/>
-  <div class="control-group">
-    <p class="control-label">PAN</p>
-    <div class="controls">
-      <%= f.text_field :pre_pan, :class => 'span1' %>
-	  P.R.I
-	 <%= f.text_field :pre_pri, :class => 'span1' %>
-	 P.R.D
-	 <%= f.text_field :pre_prd, :class => 'span1' %>
-	
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">P.R.I</p>
-    <div class="controls">
-      <%= f.text_field :pre_pri, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">P.R.D</p>
-    <div class="controls">
-      <%= f.text_field :pre_prd, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">Partido Verde</p>
-    <div class="controls">
-      <%= f.text_field :pre_verde, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-     <p class="control-label">P.T</p>
-    <div class="controls">
-      <%= f.text_field :pre_pt, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">Partido Movimiento Ciudadano</p>
-    <div class="controls">
-      <%= f.text_field :pre_movimiento, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">Partido Nueva Alianza</p>
-    <div class="controls">
-      <%= f.text_field :pre_nueva_alinza, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">Coalición Uno</p>
-    <div class="controls">
-      <%= f.text_field :pre_coalicion_uno, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">Coalición Dos</p>
-    <div class="controls">
-      <%= f.text_field :pre_coalicion_dos, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">Coalición Tres</p>
-    <div class="controls">
-      <%= f.text_field :pre_coalicion_tres, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">Coalición Cuatro</p>
-    <div class="controls">
-      <%= f.text_field :pre_coalicion_cuatro, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">Coalición Cinco</p>
-    <div class="controls">
-      <%= f.text_field :pre_coalicion_cinco, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">Candidatos No Registrados</p>
-    <div class="controls">
-      <%= f.text_field :pre_candidatos_no_registrado, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <p class="control-label">Votos Nulos</p>
-    <div class="controls">
-      <%= f.text_field :pre_votos_nulos, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <h3>Total Presidente</h3>
-    <div class="controls">
-      <%= f.text_field :pre_total, :class => 'span1' %>
-    </div>
-  </div>
-</div>
-<!-- Termina Acta para Presidente -->
 
-<!-- Acta para Diputado Federal -->
-<div class="well">
-	<br/>
-	<h3>Diputado Federal</h3>
-	<br/>
-  <div class="control-group">
-        <p class="control-label">Diputado PAN</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_pan, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-        <p class="control-label">Diputado PRI</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_pri, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-        <p class="control-label">Diputado PRD</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_prd, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :diputado_federal_verde, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_verde, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-        <p class="control-label">Diputado PT</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_pt, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-        <p class="control-label">Diputado Movimiento Ciudadano</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_movimiento, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-        <p class="control-label">Diputado Nueva Alianza</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_nueva_alianza, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-        <p class="control-label">Diputado Coalición Uno</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_coalicion_uno, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-        <p class="control-label">Diputado Coalición Dos</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_coalicion_dos, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-        <p class="control-label">Diputado Coalición Tres</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_coalicion_tres, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-        <p class="control-label">Diputado Coalición Cuatro</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_coalicion_cuatro, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-        <p class="control-label">Diputado Coalición Cinco</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_coalicion_cinco, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-        <p class="control-label">Diputado Federal Candidatos No Registrados</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_no_registrado, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-        <p class="control-label">Diputado Federal Votos Nulos</p>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_votos_nulos, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <h3>Total Diputados Federales</h3>
-    <div class="controls">
-      <%= f.text_field :diputado_federal_total, :class => 'span1' %>
-    </div>
-  </div>
-</div>
-<!-- Termina Acta para Diputado Federal -->
-
-<!-- Acta para Gobernador -->
-<div class="well">
-	<br/>
-		<h3>Gobernador</h3>
-		<br/>
-  <div class="control-group">
-      <p class="control-label">PAN</p>
-    <div class="controls">
-      <%= f.text_field :gob_pan, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-      <p class="control-label">PRI</p>
-    <div class="controls">
-      <%= f.text_field :gob_pri, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-      <p class="control-label">PRD</p>
-    <div class="controls">
-      <%= f.text_field :gob_prd, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-      <p class="control-label">Partido Verde</p>
-    <div class="controls">
-      <%= f.text_field :gob_verde, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-      <p class="control-label">PT</p>
-    <div class="controls">
-      <%= f.text_field :gob_pt, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-      <p class="control-label">Partido Movimiento Ciudadano</p>
-    <div class="controls">
-      <%= f.text_field :gob_movimiento, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-      <p class="control-label">Partido Nueva Alianza</p>
-    <div class="controls">
-      <%= f.text_field :gob_nueva_alianza, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-      <p class="control-label">Coalición Uno</p>
-    <div class="controls">
-      <%= f.text_field :gob_coalicion_uno, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-      <p class="control-label">Coalición Dos</p>
-    <div class="controls">
-      <%= f.text_field :gob_coalicion_dos, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-      <p class="control-label">Candidatos NO Registrados</p>
-    <div class="controls">
-      <%= f.text_field :gob_candidatos_no_registrado, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-      <p class="control-label">Votos Nulos</p>
-    <div class="controls">
-      <%= f.text_field :gob_votos_nulos, :class => 'span1' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <h3>Total de Votos Gobernador</h3>
-    <div class="controls">
-      <%= f.text_field :gob_total, :class => 'text_field' %>
-    </div>
-  </div>
-</div>
-<!-- Termina Acta para Gobernador -->
-
+<table>
+  <thead>
+    <tr>
+      <th>Votos para</th>
+      <th>PAN</th>
+      <th>PRI</th>
+      <th>PRD</th>
+      <th>PARTIDO VERDE</th>
+      <th>PT</th>
+      <th>Movimiento Ciudadano</th>
+      <th>Nueva Alianza</th>
+      <th>Coalición Uno</th>
+      <th>Coalición Dos</th>
+      <th>Candidatos No registrados</th>
+      <th>Votos Nulos</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+	  <td>Gobernador</td>	
+      <td><%= f.text_field :gob_pan, :class => 'span1' %></td>
+      <td><%= f.text_field :gob_pri, :class => 'span1' %></td>
+      <td><%= f.text_field :gob_prd, :class => 'span1' %></td>
+      <td><%= f.text_field :gob_verde, :class => 'span1' %></td>
+      <td><%= f.text_field :gob_pt, :class => 'span1' %></td>
+      <td><%= f.text_field :gob_movimiento, :class => 'span1' %></td>
+      <td> <%= f.text_field :gob_nueva_alianza, :class => 'span1' %></td>
+      <td><%= f.text_field :gob_coalicion_uno, :class => 'span1' %></td>
+      <td><%= f.text_field :gob_coalicion_dos, :class => 'span1' %></td>
+      <td><%= f.text_field :gob_candidatos_no_registrado, :class => 'span1' %></td>
+      <td><%= f.text_field :gob_votos_nulos, :class => 'span1' %></td>
+      <td><%= f.text_field :gob_total, :class => 'span1' %></td>
+    </tr>
+  </tbody>
+</table>
 
   <div class="form-actions">
     <%= f.submit "Crear", :class => 'btn btn-primary' %>
