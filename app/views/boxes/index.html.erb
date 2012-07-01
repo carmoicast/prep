@@ -39,11 +39,15 @@
         <td><%= box.direccion %></td>
         <td><%= box.municipio %></td>
         <td>
+	
+	<% if current_user.role == "admin" %>
           <%= link_to "Editar", edit_box_path(box), :class => 'btn btn-mini' %>
           <%= link_to "Eliminar", box_path(box),
                       :method => :delete,
                       :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
                       :class => 'btn btn-mini btn-danger' %>
+
+	<% end %>				
         </td>
       </tr>
     <% end %>
