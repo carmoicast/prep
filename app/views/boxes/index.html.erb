@@ -25,6 +25,7 @@
       <th><%= model_class.human_attribute_name(:hora_cierre) %></th>
       <th><%= model_class.human_attribute_name(:direccion) %></th>
       <th><%= model_class.human_attribute_name(:municipio) %></th>
+      <th><%= model_class.human_attribute_name(:distrito) %></th>
       <th>Acciones</th>
     </tr>
   </thead>
@@ -38,7 +39,7 @@
         <td><%= box.hora_cierre %></td>
         <td><%= box.direccion %></td>
         <td><%= box.municipio %></td>
-        <td>
+        <td><%= box.distrito %></td>
 	
 	<% if current_user.role == "admin" %>
           <%= link_to "Editar", edit_box_path(box), :class => 'btn btn-mini' %>
