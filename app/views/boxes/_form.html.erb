@@ -148,8 +148,80 @@
   </tbody>
 </table>
 
+<div class="clear"></div>
+<table>
+  <thead>
+    <tr>
+      <th>Votos para</th>
+      <th>PAN</th>
+      <th>PRI</th>
+      <th>PRD</th>
+      <th>PARTIDO VERDE</th>
+      <th>PT</th>
+      <th>Movimiento Ciudadano</th>
+      <th>Nueva Alianza</th>
+      <th>Coalición Uno</th>
+      <th>Votos Nulos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+	  <td>Diputados Locales</td>	
+      <td><%= f.text_field :diputado_local_pan, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_local_pri, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_local_prd, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_local_pt, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_local_pvem, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_local_movimiento, :class => 'span1' %></td>
+      <td> <%= f.text_field :diputado_local_nueva_alianza, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_local_coalicion_uno, :class => 'span1' %></td>
+      <td><%= f.text_field :diputado_local_votos_nulos, :class => 'span1' %></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="clear"></div>
+	
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Votos para</th>
+      <th>PAN</th>
+      <th>PRI</th>
+      <th>PRD</th>
+      <th>PARTIDO VERDE</th>
+      <th>PT</th>
+      <th>Movimiento Ciudadano</th>
+      <th>Nueva Alianza</th>
+      <th>Coalición Uno</th>
+      <th>Coalición Dos</th>
+      <th>Votos Nulos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+	  <td>Alcaldes</td>	
+      <td><%= f.text_field :alcalde_pan, :class => 'span1' %></td>
+      <td><%= f.text_field :alcalde_pri, :class => 'span1' %></td>
+      <td><%= f.text_field :alcalde_prd, :class => 'span1' %></td>
+      <td><%= f.text_field :alcalde_pt, :class => 'span1' %></td>
+      <td><%= f.text_field :alcalde_pvem, :class => 'span1' %></td>
+      <td><%= f.text_field :alcalde_movimiento, :class => 'span1' %></td>
+      <td> <%= f.text_field :alcalde_nueva_alianza, :class => 'span1' %></td>
+      <td><%= f.text_field :alcalde_coalicion_uno, :class => 'span1' %></td>
+      <td><%= f.text_field :alcalde_coalicion_dos, :class => 'span1' %></td>
+      <td><%= f.text_field :alcalde_votos_nulos, :class => 'span1' %></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
   <div class="form-actions">
-    <%= f.submit "Crear", :class => 'btn btn-primary' %>
+    <%= f.submit "Guardar", :class => 'btn btn-primary' %>
     <%= link_to "Cancelar",
                 boxes_path, :class => 'btn' %>
   </div>

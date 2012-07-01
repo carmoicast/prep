@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120630224236) do
+ActiveRecord::Schema.define(:version => 20120701043725) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -91,6 +91,25 @@ ActiveRecord::Schema.define(:version => 20120630224236) do
     t.datetime "updated_at",                        :null => false
     t.string   "distrito"
     t.integer  "user_id"
+    t.integer  "diputado_local_pan"
+    t.integer  "diputado_local_pri"
+    t.integer  "diputado_local_prd"
+    t.integer  "diputado_local_pt"
+    t.integer  "diputado_local_pvem"
+    t.integer  "diputado_local_movimiento"
+    t.integer  "diputado_local_nueva_alianza"
+    t.integer  "diputado_local_coalicion_uno"
+    t.integer  "diputado_local_votos_nulos"
+    t.integer  "alcalde_pan"
+    t.integer  "alcalde_pri"
+    t.integer  "alcalde_prd"
+    t.integer  "alcalde_pt"
+    t.string   "alcalde_pvem"
+    t.integer  "alcalde_movimiento"
+    t.integer  "alcalde_nueva_alianza"
+    t.integer  "alcalde_coalicion_uno"
+    t.integer  "alcalde_coalicion_dos"
+    t.integer  "alcalde_votos_nulos"
   end
 
   create_table "bunkers", :force => true do |t|
